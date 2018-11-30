@@ -1,0 +1,2427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Ne'laa's PvP guide to SW:TOR</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://torcommunity.com/db/tooltip.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+	<h1>Table of contents</h1>
+	<nav id="toc">
+	<ul>
+		<li>
+			<a href="#toc-combat-mechanics">Combat mechanics</a>
+			<ul>
+				<li><a href="#toc-abilities">Abilities</a></li>
+				<li><a href="#toc-effects">Effects</a></li>
+				<li><a href="#toc-gearing">Gearing</a></li>
+				<li><a href="#toc-resolve">Resolve</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#toc-group-play">Group Play</a>
+			<ul>
+				<li><a href="#toc-class-utility">Class Utility</a></li>
+				<li><a href="#toc-protection">Protection</a></li>
+				<li><a href="#toc-cleansing">Cleansing</a></li>
+			</ul>
+		</li>
+		<li><a href="#toc-know-your-enemy">Knowing your enemy</a></li>
+		<li><a href="#toc-interface-controls">Interface and controls</a></li>
+	</ul>
+	</nav>
+
+	<h1 id="toc-combat-mechanics">Combat mechanics</h1>
+	<h2>Roles</h2>
+	<p>PvP in Star Wars: The Old Republic is an inherently group-oriented game mode. Various roles in groups focus on various aspects of combat. The optimal 4-man group composition for most content, PvP included, is having 1 tank, 2 damage dealers and 1 healer, while for 8-man it's the double of each.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Role</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="nobreak"><img class="icon small" src="img/roles/tank.png" alt="Tank" /> Tank</td>
+				<td>Tanking is all about protecting your allies from damage and is probably the hardest of all roles to perform properly, especially in PvP. A good tank can easily turn a minor defeat into a glorious victory, but PvP tanking is more of an art than just a job, and beginners are probably better off playing damage dealers or even healers first to gain some experience and see how tanking works. Unlike healing, taking is always proactive, which makes it quite hard to play properly. This role is limited to Assassins, Juggernauts and Powertechs.</td>
+			</tr>
+			<tr>
+				<td class="nobreak"><img class="icon small" src="img/roles/damage.png" alt="Damage" /> Damage</td>
+				<td>The job of a damage dealer (also called DPS for reasons beyond my understanding) is to kill stuff. You will have good damage, but limited survivability. Every advanced class can be a damage dealer.</td>
+			</tr>
+			<tr>
+				<td class="nobreak"><img class="icon small" src="img/roles/heal.png" alt="Heal" /> Heal</td>
+				<td>As a healer you will be focusing on restoring the health of your allies. While you can take some proactive measures as a healer, this role is mostly reactive: you have to heal whoever's taking damage. Only Sorcerers, Operatives and Mercenaries have healing disciplines.</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<aside>
+		<p>It is an ever returning complaint that healers, in general, are capable of achieving higher numbers than damage dealers in PvP, something often considered to make them overpowered. But, if you think about it for a moment, it's not unreasonable at all to be like this. The game was designed around these trinity team setups, and it follows that a healer has to be able to reasonably keep up with 2 damage dealers and a tank from the enemy team.</p>
+	</aside>
+	<h2>Classes</h2>
+	<p>Player characters in Star Wars: The Old Republic belong to one of 4 base classes, each having 2 advanced classes. Advanced classes of the same base class share some commonalities, but they usually play very differently. Advanced classes are chosen at character creation and cannot be changed.</p>
+	<p>Above every character's head, on their nameplate is a small icon called the class icon, which makes it easy to immediately identify your enemy's class. The icons for base classes are not really seen in the game anymore, but they're included here as they're used throughout this guide to refer to both their advanced classes.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th colspan="2">Advanced class</th>
+				<th colspan="2">Base class</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/></td>
+				<td>Sith Sorcerer</td>
+				<td rowspan="2"><img class="class-icon" src="img/class_icons/sith-inquisitor.png" alt="Sith Inquisitor"/></td>
+				<td rowspan="2">Sith Inquisitor</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/></td>
+				<td>Sith Assassin</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/></td>
+				<td>Sith Juggernaut</td>
+				<td rowspan="2"><img class="class-icon" src="img/class_icons/sith-warrior.png" alt="Sith Warrior"/></td>
+				<td rowspan="2">Sith Warrior</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/></td>
+				<td>Sith Marauder</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/operative.png" alt="Operative"/></td>
+				<td>Operative</td>
+				<td rowspan="2"><img class="class-icon" src="img/class_icons/imperial-agent.png" alt="Imperial Agent"/></td>
+				<td rowspan="2">Imperial Agent</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/sniper.png" alt="Sniper"/></td>
+				<td>Sniper</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/mercenary.png" alt="Mercenary"/></td>
+				<td>Mercenary</td>
+				<td rowspan="2"><img class="class-icon" src="img/class_icons/bounty-hunter.png" alt="Bounty Hunter"/></td>
+				<td rowspan="2">Bounty Hunter</td>
+			</tr>
+			<tr>
+				<td><img class="class-icon" src="img/class_icons/powertech.png" alt="Powertech"/></td>
+				<td>Powertech</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h3>Disciplines</h3>
+	<p>In addition to your advanced class, you should also choose a discipline. Each advanced class has 3 disciplines: at least 2 of these are for dealing damage (3 in case of Marauders and Snipers), while the 3rd can be for healing (Sorcerer, Operative, Mercenary) or Tanking (Assassin, Juggernaut, Powertech). While there is no way to change the advanced class of a character (other than deleting it and completely starting over), discipliness can be changed at almost any time, but not in warzones or while being in the PvP queue. (This is not entirely true because of a bug. When you queue up as a group, only the person that queued cannot change disciplines, the rest can.)</p>
+	<p>The following table contains an overview of all the disciplines available in the game. For each I will also provide a rating based on how much I'd recommend that spec to try in PvP. <strong>Note that this rating is highly subjective and does not directly represent class viability for any specific purpose, especially not ranked PvP.</strong></p>
+	<div class="para border">
+	<div class="expansible-container">
+		<div class="expansible-content"><table>
+			<thead>
+				<tr>
+					<th>Discipline</th>
+					<th>Role</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/>Sith Sorcerer</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sorcerer/corruption.png" class="icon ability small" alt="Corruption" /><div style="display: inline-block;" class="torctip_ability">Corruption</div></a></td>
+					<td><img class="icon small" src="img/roles/heal.png" alt="Heal" /></td>
+					<td>
+						<p class="item-description">The dark side of the Force provides many benefits, including the ability to ward off death itself. By conjuring a series of arcane Force abilities from out of harm's way, the Corruption Sorcerer can sustain injured allies, allowing them to fight on with the power of the dark side's twisted gift.</p>
+						<p>If you want to play healer in PvP and this is your first time, even after a severe gutting recently, Sorcerer is still your best choice. Strong burst heals combined with good kiting and focus escapes make Sorcerers the strongest PvP healers at the moment.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sorcerer/lightning.png" class="icon ability small" alt="Lightning" /><div style="display: inline-block;" class="torctip_ability">Lightning</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Of all the dark arts of the Sith, little can match the spectacle and devastation of Force lightning. Summoning intense discharges of pure Force energy, the Lightning Sorcerer overwhelms enemies with punishing damage from a distance, leaving them shaken and vulnerable--if not dead.</p>
+						<p>Lightning is Sorcerers' burst damage discipline, except it hits like a wet noodle. Sadly not only its burst is lacking, but its survivability is bad, too, relying almost only on kiting. On the good side, its energy management is virtually nonexistent and its rotation is easier. There's about nothing in Lightning that Madness doesn't do better.</p>
+						<p>Recommmended: not really</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sorcerer/madness.png" class="icon ability small" alt="Madness" /><div style="display: inline-block;" class="torctip_ability">Madness</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Delving ever deeper into the dark side of the Force can lead to madness, but it can also lead to immense power. Attacking multiple enemies simultaneously and instilling terror in their hearts, all while sapping their very life essence from afar, the Madness Sorcerer is a dark threat unlike any other.</p>
+						<p>Madness is the discipline utilizing mostly periodic damage to wear opponents down. Once there were no warzones without Madness Sorcerers, but those days have long passed. Recent buffs have once again made them an okay choice for playing damage Sorcerer.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>Sith Assassin</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/assassin/darkness.png" class="icon ability small" alt="Darkness" /><div style="display: inline-block;" class="torctip_ability">Darkness</div></a></td>
+					<td><img class="icon small" src="img/roles/tank.png" alt="Tank" /></td>
+					<td>
+						<p class="item-description">In darkness, there is protection. A Darkness Assassin acts in defense of their allies, using the dark side of the Force to ward off attacks and launch powerful channels of Force lightning while standing their ground against even the most formidable enemies.</p>
+						<p>Despite wearing only Light Armor, Darkness Assassins make decent tanks. Combined with their ability to stealth out from a fight, they are not easy to kill and with their many great utilities they make an outstandingly good choice for objective-minded players.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/assassin/deception.png" class="icon ability small" alt="Deception" /><div style="display: inline-block;" class="torctip_ability">Deception</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">From the murky depths of the dark side, the Deception Assassin emerges with a calculated plan. As the Assassin presses the attack, Force lightning accumulates within their double-bladed lightsaber and culminates in a massive discharge that can ravage the Assassin's opponent before they even know what hit them.</p>
+						<p>Strong single target burst, mostly 10 meter range, stealth, lots of control abilities – that's Deception. While it's not hard to play relatively well, if you're looking for something godmode, look elsewhere.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/assassin/hatred.png" class="icon ability small" alt="Hatred" /><div style="display: inline-block;" class="torctip_ability">Hatred</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Hate fuels the dark side of the Force, and no one knows this better than the Hatred Assassin. Able to command dark Force powers that assault many targets at once or sap an enemy's very essence from a distance, the Hatred Assassin can also stand face-to-face against any foe.</p>
+						<p>The Assassin version of Madness, Hatred is strong in fights with many stacked enemies. Good overall damage potential but there are few reasons to play it over Deception.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut" />Sith Juggernaut</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/juggernaut/immortal.png" class="icon ability small" alt="Immortal" /><div style="display: inline-block;" class="torctip_ability">Immortal</div></a></td>
+					<td><img class="icon small" src="img/roles/tank.png" alt="Tank" /></td>
+					<td>
+						<p class="item-description">As the toughest of the Warriors, the Immortal Juggernaut can withstand even the most brutal assaults. Using the Force to turn nearly invincible for short bursts of time and to deliver crushing blows to the enemy, this Juggernaut is capable of taking a beating and giving one, too.</p>
+						<p>You can't get closer to classical tanking than playing an Immortal Juggernaut. This discipline is a beast: lots of very strong defensives, Heavy Armor and your mighty pocket healers will make you truly immortal. And you have <a href="https://torcommunity.com/database/ability/J4rSfx7">Backhand</a>. Do I need to say more?</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/juggernaut/vengeance.png" class="icon ability small" alt="Vengeance" /><div style="display: inline-block;" class="torctip_ability">Vengeance</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">When embracing the dark side of the Force, vengeance can be a powerful ally. With sustained and ruthless lightsaber thrusts delivered in the lithe Shien Form, the Vengeance Juggernaut increases damage without sacrificing defense--an ideal combination of tenacity and viciousness.</p>
+						<p>Vengeance is the periodic damage discipline of Juggernauts, but the direct attacks do pretty decent burst damage themselves. While people like to write it off as "fluff damage", Vengeance can be a strong and sturdy discipline in the right hands with some of the highest overall DPS potential in PvP.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/juggernaut/rage.png" class="icon ability small" alt="Rage" /><div style="display: inline-block;" class="torctip_ability">Rage</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Fuelled by extreme rage, a Sith Warrior can reach new heights of destructive power. Furiously striking at one or more foes with bursts of hate and anger, the Rage Juggernaut forges ahead, the dark side of the Force providing ever more opportunities to crush and obliterate the enemy.</p>
+						<p>If you like big hits, Rage has them. While there probably aren't many reasons to choose this over Vengeance, a good burst spec always has its place. Sadly, it's inferior to its Marauder counterpart, Fury, in almost every way.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>Sith Marauder</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/marauder/annihilation.png" class="icon ability small" alt="Annihilation" /><div style="display: inline-block;" class="torctip_ability">Annihilation</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Annihilation doesn't have to be instantaneous--and that's how the Annihilation Marauder likes it. With lightsaber and Force attacks designed to bleed their foe and increasing their potency with an aggressive combat form, the Annihilation Marauder causes deep, rupturing wounds that add up until it's too late.</p>
+						<p>Still quite bursty for a damage over time discipline, Annihilation, while often termed a PvE discipline, has its place in PvP, especially in pressure compositions. Proper management of your DoTs is necessary to get this discipline right, but it is rewarding.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/marauder/carnage.png" class="icon ability small" alt="Carnage" /><div style="display: inline-block;" class="torctip_ability">Carnage</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Agile and swift, the Carnage Marauder wins the day by way of sheer volume. As a devastating flurry of dual lightsaber strikes and Force attacks overwhelm their foe, each successful blow can serve to embolden the Carnage Marauder in their assault, making them all the more deadly.</p>
+						<p>Carnage has recently gone through a few changes that, according to diehard players of the discipline, ruined its "beauty", but it's still debated whether this made the discipline better or worse in PvP. It still features an absurd burst, but there's little reason to choose this over Fury now.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/marauder/fury.png" class="icon ability small" alt="Fury" /><div style="display: inline-block;" class="torctip_ability">Fury</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">The dark side can be a powerful ally when one channels their inner fury, and no one knows this better than the Fury Marauder. Faced with one opponent or many, the Fury Marauder strikes with raging bursts of power while maintaining a balanced stance that offers protection against the enemy's attempts at obliteration.</p>
+						<p>Probably the most overpowered discipline in the game at the moment, the only thing Fury lacks is self-healing. Incredible damage reduction paired with unparalleled control immunity and a very high burst, Fury is the top damage discipline for… anything, really.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/operative.png" alt="Operative"/>Operative</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/operative/medicine.png" class="icon ability small" alt="Medicine" /><div style="display: inline-block;" class="torctip_ability">Medicine</div></a></td>
+					<td><img class="icon small" src="img/roles/heal.png" alt="Heal" /></td>
+					<td>
+						<p class="item-description">As an accomplished practitioner of the medical arts, the Medicine Operative serves as the preservative backbone of any combat team. Deploying a full complement of sophisticated gadgets to dispense healing kolto and reparative nanotech clouds to one or more targets, the Medicine Operative ensures their allies remain fit for fighting.</p>
+						<p>Easier to pin and burst down than Sorcerers, Operative healers are still not bad for PvP, especially for the objective-based warzones. Packed with stealth for team utility and lots of AoE for potentially high HPS numbers, their lack of good burst healing and relatively easy shutdown still make them somewhat inferior to Sorcerers. Also, because of the need for HoT micromanagement, Operatives are noticeably harder to play properly than the other two healers.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/operative/concealment.png" class="icon ability small" alt="Concealment" /><div style="display: inline-block;" class="torctip_ability">Concealment</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Striking from the shadows, the Concealment Operative surprises the enemy with a flurry of calculated attacks designed to stun and debilitate. Then, before the fight gets out of hand, the Concealment Operative can return to a position of stealth, biding their time until the time to strike reveals itself again.</p>
+						<p>Concealment is known as the king of duels, as it really excels at 1v1 situations. It is, however, a hit &amp; run discipline: it relies heavily on dealing some burst damage, running away, healing up and coming back. The lack of any notable AoE damage, constant need to disengage and general vulnerability to all the CC flying randomly around, Concealment is only a good choice for hardcore objective-based play.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/operative/lethality.png" class="icon ability small" alt="Lethality" /><div style="display: inline-block;" class="torctip_ability">Lethality</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">The Lethality Operative firmly believes the one true gift that keeps on giving is poison. Dispensing potent toxins using a variety of methods, the Lethality Operative's attacks take a toll over time, corroding the enemy from within until all that's left is a whithered husk that only thinks it still has a chance.</p>
+						<p>If you check the damage rankings you might be fooled into thinking Lethality is a good discipline to play, but not really seeing any in any warzones might give you a hint it's not so. The discipline is strongly based on periodic damage, but its setup time is too long and its burst is easy to negate. There isn't really a good reason to play Lethality besides being bored with Concealment.</p>
+						<p>Recommmended: not really</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sniper.png" alt="Sniper"/>Sniper</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sniper/marksmanship.png" class="icon ability small" alt="Marksmanship" /><div style="display: inline-block;" class="torctip_ability">Marksmanship</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">One perfect shot has the potential to change everything, and no one is more precise than the Marksmanship Sniper. From the safety of cover, the Marksmanship Sniper ambushes the enemy and follows up with an encore of penetrating blasts that make extra sure the Sniper's job is done.</p>
+						<p>Like Immortal Juggernauts are as close to classical tanking as you can get, the same can be said about Marksman Snipers and sniping. High damage, single target hits that can hurt for a lot if unmitigated. Being the only discipline that has virtually no yellow damage, the effectiveness of Marksman is a little more determined by who you're going against.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sniper/engineering.png" class="icon ability small" alt="Engineering" /><div style="display: inline-block;" class="torctip_ability">Engineering</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Technology--and its application in deploying advanced weaponry--sets the Engineering Sniper apart from the rest. A variety of probes at their disposal allows the Engineering Sniper to attack from a distance with explosions, electrical jolts and waves of destructive plasma designed to eliminate any target.</p>
+						<p>If I had to summarize Engineering in one word, ridiculous would be it. 50% slow in a 8-meter wide area, infinitely replaceable. Ranged stun. Strong burst. Despite being nerfed a bit after everyone was playing this in 5.0, Engineering is still a powerful discipline.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/sniper/virulence.png" class="icon ability small" alt="Virulence" /><div style="display: inline-block;" class="torctip_ability">Virulence</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Some Agents prefer a less direct method of eliminating a target, such as administering poison. Lethal toxins and all-consuming microbes are the domain of the walking biohazard known as the Virulence Sniper, who inflicts lethal shots and lobs corrosive grenades from a safe distance where they can witness the results of their handiwork.</p>
+						<p>Convert Lethality to Snipers and you get Virulence. If you like periodic damage disciplines, and you want to play Sniper, this is your choice.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/mercenary.png" alt="Mercenary"/>Mercenary</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/mercenary/bodyguard.png" class="icon ability small" alt="Bodyguard" /><div style="display: inline-block;" class="torctip_ability">Bodyguard</div></a></td>
+					<td><img class="icon small" src="img/roles/heal.png" alt="Heal" /></td>
+					<td>
+						<p class="item-description">The Bodyguard Mercenary specializes in personal-security services, positioning themselves as the best protection credits can buy. A varied array of kolto dispersement instruments provide the Bodyguard's targets with protective shells and time-release infusions, offering safe haven in even the most hostile environments.</p>
+						<p>Contrary to the common belief, a well-played Bodyguard Mercenary is not a bad healer to have, though it's nothing insanely outstanding. The 5.0 buffs to Mercenaries also made this discipline a nightmare to kill, but they are still easier to shut down than the other two healers. Pick this if you want more of a healing challenge.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/mercenary/arsenal.png" class="icon ability small" alt="Arsenal" /><div style="display: inline-block;" class="torctip_ability">Arsenal</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">The Arsenal Mercenary specializes in distance attacks, employing long-range weapons to demolish anyone unlucky enough to be in their sights. Devastating missile-fire combinations and relentless blaster volleys generate a spectacle of explosive brilliance and transform the Bounty Hunter into a virtual artillery platform.</p>
+						<p>If you're just getting into PvP, this is probably the discipline you should go with first. While Mercenary has a notably higher skill cap than most players are comfortable with, the Arsenal rotation is easy to get started with and the class' defensives are solid enough to save your skin in a few tough situations.</p>
+						<p>Recommmended: highly</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/mercenary/innovative_ordnance.png" class="icon ability small" alt="Innovative Ordnance" /><div style="display: inline-block;" class="torctip_ability">Innovative Ordnance</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Taking advantage of chaos they've created is what the Innovative Ordnance Mercenary is all about. With an arsenal of explosive and piercing munitions, the I.O. Merc's barrages of missiles, grenades and weapon blasts cause lasting, destructive damage to all their enemies.</p>
+						<p>Innovaive Ordnance can still do just as much, if not a little more damage than Arsenal. There's nothing particularly weak about it, but you have to pay some attention to proper Heat and DoT management.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/powertech.png" alt="Powertech"/>Powertech</h4></td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/powertech/shield_tech.png" class="icon ability small" alt="Shield Tech" /><div style="display: inline-block;" class="torctip_ability">Shield Tech</div></a></td>
+					<td><img class="icon small" src="img/roles/tank.png" alt="Tank" /></td>
+					<td>
+						<p class="item-description">Launching into the fray with a jetpack-propelled attack and able to withstand powerful offenses, the Powertech trained in the Shield Tech specification takes the brunt of the assault while employing a wide range of tech-based attacks to scorch and trip up even the most formidable adversaries.</p>
+						<p>Shield Tech lacks both the "troll power" of Assassins and the sheer in-your-face survivability of Juggernauts. Once a class featuring unparalleled AoE damage to make up for its mildly competitive tankiness, even that has been taken away from them. Shield Tech serves just as well as any to slap Guard on a healer, but it offers little more than that.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/powertech/pyrotech.png" class="icon ability small" alt="Pyrotech" /><div style="display: inline-block;" class="torctip_ability">Pyrotech</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">Need a light? The Pyrotech-style Powertech adds fuel to any firefight with an abundance of vivid, searing flame attacks. From fistfuls of fire to missiles loaded with highly combustible compounds, the Pyrotech's arsenal allows them to never back down while making sure their enemy burns out in a blaze of destruction.</p>
+						<p>Pyrotech is so bad in PvP it's not even funny. It really is just bad.</p>
+						<p>Recommmended: not really</p>
+					</td>
+				</tr>
+				<tr>
+					<td><a class="torctip_ability"><img src="img/disciplines/powertech/advanced_prototype.png" class="icon ability small" alt="Advanced Prototype" /><div style="display: inline-block;" class="torctip_ability">Advanced Prototype</div></a></td>
+					<td><img class="icon small" src="img/roles/damage.png" alt="Damage" /></td>
+					<td>
+						<p class="item-description">When stalking dangerous prey, a selection of powerful, high-tech armaments can be a hunter's best friend. The Advanced Prototype Powertech's thermal detonators, gauntlet blades and magnetized bracers devastate their intended target while ensuring the Powertech remains on the bleeding edge of any engagement.</p>
+						<p>Advanced Prototype still probably has the highest burst damage of all classes, being able to annihilate an unsuspecting victim in a painfully short time. While well-equipped for offense, AP falls a bit short on defense and ends up dying easily if not supported.</p>
+						<p>Recommmended: so-so</p>
+					</td>
+				</tr>
+			</tbody>
+		</table></div>
+		<a class="expansible-expander">Show full table</a>
+	</div></div>
+	<h4>Recommendations for new players</h4>
+	<p>If you're new to PvP and trying to find a class you can get started with, I've ranked the various Advanced Classes according to how rewarding I find them to play. Only one (the easiest) discipline per Advanced Class is listed. <strong>The ordering used in this is highly subjective.</strong></p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th class="nobreak"><img class="icon small" src="img/roles/tank.png" alt="Tank" /> Tank</th>
+				<th class="nobreak"><img class="icon small" src="img/roles/damage.png" alt="Damage" /> Damage</th>
+				<th class="nobreak"><img class="icon small" src="img/roles/heal.png" alt="Healer" /> Heal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a class="torctip_ability"><img src="img/disciplines/juggernaut/immortal.png" class="icon ability small" alt="Immortal" /><div style="display: inline-block;" class="torctip_ability">Immortal</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/juggernaut/vengeance.png" class="icon ability small" alt="Vengeance" /><div style="display: inline-block;" class="torctip_ability">Vengeance</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/sorcerer/corruption.png" class="icon ability small" alt="Corruption" /><div style="display: inline-block;" class="torctip_ability">Corruption</div></a></td>
+			</tr>
+			<tr>
+				<td><a class="torctip_ability"><img src="img/disciplines/assassin/darkness.png" class="icon ability small" alt="Darkness" /><div style="display: inline-block;" class="torctip_ability">Darkness</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/mercenary/arsenal.png" class="icon ability small" alt="Arsenal" /><div style="display: inline-block;" class="torctip_ability">Arsenal</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/mercenary/bodyguard.png" class="icon ability small" alt="Bodyguard" /><div style="display: inline-block;" class="torctip_ability">Bodyguard</div></a></td>
+			</tr>
+			<tr>
+				<td><a class="torctip_ability"><img src="img/disciplines/powertech/shield_tech.png" class="icon ability small" alt="Shield Tech" /><div style="display: inline-block;" class="torctip_ability">Shield Tech</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/marauder/fury.png" class="icon ability small" alt="Fury" /><div style="display: inline-block;" class="torctip_ability">Fury</div></a></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/operative/medicine.png" class="icon ability small" alt="Medicine" /><div style="display: inline-block;" class="torctip_ability">Medicine</div></a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/sniper/engineering.png" class="icon ability small" alt="Engineering" /><div style="display: inline-block;" class="torctip_ability">Engineering</div></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/operative/concealment.png" class="icon ability small" alt="Concealment" /><div style="display: inline-block;" class="torctip_ability">Concealment</div></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/sorcerer/madness.png" class="icon ability small" alt="Madness" /><div style="display: inline-block;" class="torctip_ability">Madness</div></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/assassin/deception.png" class="icon ability small" alt="Deception" /><div style="display: inline-block;" class="torctip_ability">Deception</div></a></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><a class="torctip_ability"><img src="img/disciplines/powertech/advanced_prototype.png" class="icon ability small" alt="Advanced Prototype" /><div style="display: inline-block;" class="torctip_ability">Advanced Prototype</div></a></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table></div>
+
+	<h2 id="toc-abilities">Abilities</h2>
+
+		<p>Abilities (skills, spells, whatever you like to call them) are SW:ToR's combat actions. Most abilities come from your chosen class, but you also gain a few ones unique to your chosen discipline. Understanding how abilities work is one of the fundamental requirements to being a good player in SW:ToR.</p>
+
+		<h3 id="toc-resources">Resources</h3>
+
+			<p>In order to use most abilities, you will need resources. Each base class one kind of what we call a primary resource, these are Force, Rage, Energy and Heat, respectively, with some having secondary resources to manage, too. Secondary resources are required for some abilities.</p>
+
+			<h4>Sith Inquisitor</h4>
+
+				<p>Sith Inquisitors' primary resource is Force. Assassins have a Force pool of 100, while Sorcerers have 600. It does not mean that Sorcerers have it better: their abilities also cost more Force. Inquisitors passively regenerate Force with time, at a rate of 8 Force/second.</p>
+
+			<h4>Sith Warrior</h4>
+
+				<p>Sith Warriors rely on their Rage to execute attacks. Rage is different from all other primary resources in the sense that does not regenerate with time. Warriors have attacks and utilities that generate Rage to spend on more powerful abilities, up to a maximum of 12.</p>
+
+				<h5>Fury</h5>
+
+					<p>Marauders also have a secondary resource, <a href="https://torcommunity.com/database/ability/DB03Yt4">Fury</a>, that is gained when you spend Rage, and having 30 of it allows the use of <a href="https://torcommunity.com/database/ability/yOL0fc2">Predeation</a>, <a href="https://torcommunity.com/database/ability/lPcsJeD">Berserk</a> or <a href="https://torcommunity.com/database/ability/Nye8UfG">Bloodthirst</a> abilities.</p>
+
+			<h4>Imperial Agent</h4>
+
+				<p>The primary resource for Imperial Agents is Energy. Operatives have the base Energy pool of 100, while Snipers get an extra 10 Energy to spend via the Energy Tanks passive. The base Energy regeneration rate is 5 Energy/second, but Operatives get an extra 20% regeneration via their <a href="https://torcommunity.com/database/ability/IDvPiyS">Preparedness</a> passive; this, however, gradually declines if you run low on Energy. (The tooltip for the Preparedness passive claims that it increases Energy regeneration by 1 Energy per second, but this is wrong. The real Energy regeneration rates are 2.4/3.6/6.0 Energy/second, which is a 20% increase, not a flat +1 per second.)</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th colspan="2" rowspan="2">Energy</th>
+				<th colspan="2">Regeneration rate</th>
+			</tr>
+			<tr>
+				<th>Operative</th>
+				<th>Sniper</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>20</td>
+				<td>2.40</td>
+				<td>2.00</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>60</td>
+				<td>3.60</td>
+				<td>3.00</td>
+			</tr>
+			<tr>
+				<td>60</td>
+				<td></td>
+				<td>6.00</td>
+				<td>5.00</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h5>Tactical Advantage</h5>
+	<p>Operatives' also have a secondary resource, called <a href="https://torcommunity.com/database/ability/bRIePJ4">Tactical Advantage</a>. Damage specializations can have 2 Tactical Advantage stacks at a time, while the Medicine discipline allows you an extra for a total of 3.</p>
+	<h4>Bounty Hunter</h4>
+	<p>While it looks different, Bounty Hunters have essentially the same resource mechanic as Agents do. The Bounty Hunter resource is called Heat, and works as a "reverse Energy": your Heat dissipates over time at a base rate of 5 Heat/second, while  abilities generate it. Also, if you go above 40 Heat, your dissipation rate will decrease, making it harder to cool down and propably necessitate the use of <a href="https://torcommunity.com/database/ability/kPBpKzF">Vent Heat</a>.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th colspan="2">Heat</th>
+				<th>Dissipation rate</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>40</td>
+				<td>5.00</td>
+			</tr>
+			<tr>
+				<td>40</td>
+				<td>60</td>
+				<td>3.00</td>
+			</tr>
+			<tr>
+				<td>60</td>
+				<td></td>
+				<td>2.00</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h5>Supercharge</h5>
+	<p>Mercenaries' secondary resource is called <a href="https://torcommunity.com/database/ability/ARhlz37">Supercharge</a>, which builds upon using certain abilities. At 10 stacks of Supercharge, it can either be used to activate <a href="https://torcommunity.com/database/ability/GbkzGbS">Supercharged Gas</a> or the Mercenary raidbuff, <a href="https://torcommunity.com/database/ability/t2CknfA">Supercharged Celerity</a>.</p>
+	<h3>Stats</h3>
+	<p>Related to abilities and attacking, let me first list what stats are there, then talk a little about them:</p>
+	<ul>
+		<li>Primary stats:
+			<ul>
+				<li>Mastery: The main stat, increases your all-around damage and healing and your critical chance. Before 4.0 base classes used to have different main stats, but Bioware decided it was too hard and merged it all into Mastery.</li>
+				<li>Endurance: The more endurance you have, the more HP you will have. Each point of Endurance will give you approximately 12 points of health.</li>
+			</ul>
+		</li>
+		<li>Secondary stats:
+			<ul>
+				<li>Power: Much like Mastery, but increasing your damage/healing by more whilst not providing extra critical chance.</li>
+				<li>Defense: Allows you to completely avoid melee/ranged attacks. Not really useful in PvP, I'll talk about it later.</li>
+			</ul>
+		</li>
+		<li>Tertiary stats:
+			<ul>
+				<li>Accuracy: Increases your chance to hit the target, or, if above 100%, reduces your target's defense chance.</li>
+				<li>Alacrity: Provides an overall speedup to your abilities.</li>
+				<li>Critical: Increases both your chance to critically hit and the amplitude of those hits.</li>
+				<li>Shield rating: Increases your chance to shield attacks.</li>
+				<li>Absorption rating: Increases the damage reduction on shielded attacks.</li>
+			</ul>
+		</li>
+	</ul>
+	<aside>An honorable mention is Expertise, a stat that was removed in 5.0 to allow players to share the same equipment in PvP and PvE. Before 5.0 there was separate equipment to purchase for PvP, and only that had any Expertise on it. Expertise increased your damage done to players, decreased your damage taken from players and buffed your heals on players engaged in PvP. The fixed maximum amount of expertise one could have was 2018; you might still see this number popping up here and there as a kind of magic PvP number.</aside>
+	<h4>Diminishing returns</h4>
+	<p>Most of your stats give, what the community likes to call them, diminishing returns. It means the respective gains from investing any number of stat points is not linear, or, in simpler words, if you get twice as much of a stat, the bonuses from it won't double. (You can see the exact formulas for example <a href="http://www.swtor.com/community/showpost.php?p=8524702">here</a>. The only change for level 70 is that the stat divisor in the exponent is not 65 anymore, but 70.) And, while most people talk about it as if there was any, there's no single point of diminishment. The functions are monotonically increasing, meaning if you get more of a certain stat, you'll always get more powerful by it. Also, they don't have any "hard" breaking points, they decline "gracefully".</p>
+	<p>There do, however, exists numeric values of various stats from which it is more beneficial to invest in other stats, because they will provide bigger Mitigation/DPS/HPS bonuses than investing in your one stat. Finding this optimium value is not a trivial task and is almost impossible by pure experimentation. Class guides and sites like this have some guidelines on how much of each stat you should take for optimal performance. The following table lists some properties of diminishing stats:</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Stat</th>
+				<th>Hard cap</th>
+				<th>Median rating</th>
+				<th>Second tertile</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Defense chance</td>
+				<td>30%</td>
+				<td>1717(.45)</td>
+				<td>2722(.10)</td>
+			</tr>
+			<tr>
+				<td>Shield chance</td>
+				<td>50%</td>
+				<td>1873(.31)</td>
+				<td>2969(.12)</td>
+			</tr>
+			<tr>
+				<td>Absorption percentage</td>
+				<td>50%</td>
+				<td>1561(.09)</td>
+				<td>2474(.27)</td>
+			</tr>
+			<tr>
+				<td>Alacrity percentage</td>
+				<td>30%</td>
+				<td>1789(.01)</td>
+				<td>2835(.52)</td>
+			</tr>
+			<tr>
+				<td>Accuracy percentage</td>
+				<td>30%</td>
+				<td>1431(.21)</td>
+				<td>2268(.42)</td>
+			</tr>
+			<tr>
+				<td>Critical chance (critical)</td>
+				<td>30%</td>
+				<td>1144(.97)</td>
+				<td>1814(.73)</td>
+			</tr>
+			<tr>
+				<td>Critical chance (mastery)</td>
+				<td>20%</td>
+				<td>5202(.66)</td>
+				<td>8246(.02)</td>
+			</tr>
+			<tr>
+				<td>Critical multiplier</td>
+				<td>30%</td>
+				<td>1144(.97)</td>
+				<td>1814(.73)</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h3>Targeting</h3>
+	<p>Every ability has a predefined kind of target it can be activated on. These are:</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Target type</th>
+				<th>Meaning</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Self</td>
+				<td>The ability is activated on the caster. These can include friendly abilities (most defensives are self-targeted), or hostile ones, in which case they hit enemies in the vicinity of the caster.</td>
+			</tr>
+			<tr>
+				<td>Enemy</td>
+				<td>The ability is activated on the primary target of the caster, that must be attackable. The standard "hit the target" kind of attack.</td>
+			</tr>
+			<tr>
+				<td>Friendly</td>
+				<td>The ability is activated on the primary target of the caster, that must be friendly. Mostly heals belong here.</td>
+			</tr>
+			<tr>
+				<td>Ground</td>
+				<td>The ability is activated in an area chosen by the caster. Not all classes have access to ground targeted abilites. When a ground targeted ability is activated, the cursor temporarily turns into a targeting reticule that can be used to mark the area of effect on the ground. Ground targeted abilities can also be quickly activated centered on your main target (friendly or hostile) if you doubly activate (click the icon or press the keybind twice) the ability.</td>
+			</tr>
+			<tr>
+				<td>Ground self</td>
+				<td>This is like ground targeting, but the area of effect is not placeable, it's always at the caster's current location. (The difference between this and the self-targeted abilities is that self-targeted effects always follow the caster, while Ground Self targeting just leaves an area of effect behind at the caster's location which does not move, even if the caster does.)</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<p>Abilities can also be single-target or AoE (area of effect), depending on whether they can only affect one or multiple targets at a time. Except for ground targeted abilities, which are by their nature area effects (exceptions like the <a href="https://torcommunity.com/database/ability/yjvpJ4B">Throw the Huttball</a> exist, but that's a special one) each combination of targeting type and target cardinality exist.</p>
+	<h3>Types of effect areas</h3>
+	<p>Area of Effect abilities affect not just their primary target (if they have one) but multiple (up to a usual maximum of 4 or 8) potential targets in a certain area. The areas of effect are three dimensional bodies in space and if they have a ground marker, it is of the shape of their cross section with the ground.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Shape</th>
+				<th>Description</th>
+				<th>Example</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Cone (triangle)</td>
+				<td>Conal attacks are self-centered, hitting everyone in a cone of a ceratin angle in front of you.</td>
+				<td><a href="https://torcommunity.com/database/ability/6eHrGiF">Noxious Knives</a></td>
+			</tr>
+			<tr>
+				<td>Sphere (circle)</td>
+				<td>Not surprisingly, these hit in a sphere around their activation target. Most AoEs belong to this category.</td>
+				<td><a href="https://torcommunity.com/database/ability/10qVywQ">Flame Sweep</a></td>
+			</tr>
+			<tr>
+				<td>Cylinder (rectangle)</td>
+				<td>Cylindrical AoEs are mostly used by NPCs, player abilities of this kind are few.</td>
+				<td><a href="https://torcommunity.com/database/ability/ywBVhWO">Dual Saber Throw</a></td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h3>Activation time</h3>
+	<p>Activation happens when you click an ability's icon on the UI or press its associated keybind. Not all abilities exert their full effects on their targets immediately, however. There are 3 types of activation times:</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Type</th>
+				<th>Description</th>
+				<th>Example</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Instant</td>
+				<td>Instant abilities activate instantly and their activation is not interruptible. If you can use them, they will fire. A new change in 5.0 is that melee now only have instant abilities.</td>
+				<td><a href="https://torcommunity.com/database/ability/fQAlH29">Ravage</a></td>
+			</tr>
+			<tr>
+				<td>Channelled</td>
+				<td>Channeled abilities also activate instantly, but they apply their effects incrementally during their use. The earlier they are interrupted the less damage/healing they do.</td>
+				<td><a href="https://torcommunity.com/database/ability/UhBXB50">Series of Shots</a></td>
+			</tr>
+			<tr>
+				<td>Cast</td>
+				<td>Casts are somewhat similar to channels in that they are interruptible, cause a cast bar to appear, but they do not do anything till they are finished. Unlike channels, casts should be interrupted as late as possible, since this causes the caster to waste the most time.</td>
+				<td><a href="https://torcommunity.com/database/ability/pyqkJrD">Crushing Darkness</a></td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h5>Activation on the move</h5>
+	<p>Most channelled and cast abilites require you to stand still or they get interrupted by movement. Some, however, are possible to be used on the move, though they might need utility points to make this work. (<a class="torctip_ability"><img class="icon ability small" src="https://torcommunity.com/db/icons/3041992948_3671515229.jpg" alt="Force Mobility" />Force Mobility</a> for Sorcerers, <a class="torctip_ability"><img class="icon ability small" src="https://torcommunity.com/db/icons/3533406657_3327671360.jpg" alt="Calculated Pursuit" />Calculated Pursuit</a> for Snipers and <a class="torctip_ability"><img class="icon ability small" src="img/utilities/mercenary/thrill_of_the_hunt.png" alt="Thrill of the Hunt" />Thrill of the Hunt</a> for Mercenaries.) These casts/channels are subject to any hostile interrupts (interrupt/knockback/stun), and, while you cannot cancel them using movement, you can press the <kbd>Esc</kbd> to stop them from progressing any further.</p>
+	<h5>Pushback</h5>
+	<p>Pushback is what happens when you get attacked while casting: your cast progress goes back a little so your casts take longer to complete. Most disciplines heavily dependent on casts have some passive pushback immunity/reduction, making the effects of this mechanic way less noticeable.</p>
+	<h5>Travel time and delayed damage</h5>
+	<p>Most attacks have a so-called travel time while others just work with some delay. Even though the activation happens instantly, you might just launch a projectile that takes some time to reach its target. While travel time is short and usually doesn't matter, it's important to know which abilities deal damage truly instantly and which have a travel time. (It can easily mean the difference between losing an objective and keeping it!)</p>
+	<h4>Cooldown</h4>
+	<p>Some abilities are more powerful than others, and some do very high damage or have otherwise very good utility. Just being able to use them without any limitation would ruin the game. Because of this, most abilities have a cooldown, a given amount of time that must pass before a certain ability can be used again.</p>
+	<h5>The global cooldown</h5>
+	<p>In order to not have the game overtaken by automated macros and give time to react, most abilities share a global cooldown. When an ablity is activated, for 1.5 seconds (by default) you cannot activate anything else that's also on the global cooldown.</p>
+	<div class="para border"><figure>
+		<img alt="Quickbars for a Concealment Operative." src="img/gameplay/quickbar_gcd.png" />
+		<figcaption>Quickbars for a Concealment Operative. Note the shading on most abilities: those are affected by the active GCD and cannot be used before it expires. The unshaded abilities are off the GCD.</figcaption>
+	</figure></div>
+	<h6>Activation off the GCD</h6>
+	<p>If you look at the screenshot above, you should notice that not all abilities (mostly defensive and offensive buffs) have the partial shading that represents the global cooldown. These are, as we call them, off the GCD, and can be used anytime. Well, almost anytime.</p>
+	<p>How these abilities work with the global cooldown and various activation types is nontrivial. The least problematic type of activation is instant: off-the-GCD abilities play nicely along with those. As you'd expect, you can use one instant ability per GCD, but you can use your off-the-GCD defensives anytime, even during the GCD windows between normal activations.</p>
+	<p>Channels and casts are more complicated. If you're channelling something and you use something that's off the GCD, your off-the-GCD ability <em>will activate, but your current channel will be cancelled</em>. For example, if you wish to pop <a href="https://torcommunity.com/database/ability/8640FEB">Thermal Sensor Override</a> before <a href="https://torcommunity.com/database/ability/AcCyVlA">Blazing Bolts</a>, but mistime your keypresses a bit and end up hitting it a split seconds afterwards, the <a href="https://torcommunity.com/database/ability/AcCyVlA">Blazing Bolts</a> channel will cancel and go on cooldown while <a href="https://torcommunity.com/database/ability/8640FEB">Thermal Sensor Override</a> remains active for the next ability. Also, if you pop <a href="https://torcommunity.com/database/ability/yd8yLmH">Energy Shield</a> during <a href="https://torcommunity.com/database/ability/AcCyVlA">Blazing Bolts</a>, you can say goodbye to the remaining damage of that channel.</p>
+	<p><em>Casts</em>, on the other hand, <em>do not get interrupted by off-the-GCD ability usage</em>. Not only that, while casting, your off-the-GCD abilities <em>will not be usable and only give you an error message</em>. For example if you're playing healer and you're low on HP and you want to cast a bigger heal to get yourself back up, but in the meantime you realize it won't finish in time, quickly reaching for a defensive will not help you. What you can do in this case, is to interrupt the cast first (by pressing Esc or moving a bit), then use the defensive.</p>
+	<h6>Toggles</h6>
+	<p>Two abilities, <a href="https://torcommunity.com/database/ability/hIxzLoH">Stealth</a> and <a href="https://torcommunity.com/database/ability/ZyErGpO">Guard</a> can be switched on and off. <strong>Their application is always subject to the global cooldown, but their removal is not.</strong> There's, however, a small bug about it. Trying to deactivate a toggled ability during an active GCD will seem to not do anything, except, if you look at your quickbars carefully, appear to reset your global cooldown. (There's no secret exploit here, the GCD does not actually get reset, only the shading on the UI does.) If you try to deactivate for a second time, you will see that now it succeeds, even if you're still within an active GCD.</p>
+	<h4>Alacrity</h4>
+	<p>Stacking Alacrity Rating is your way to speed up most things you do in combat. In particular, Alacrity speeds up:
+		<span class="bullet-list-item">the global cooldown,</span>
+		<span class="bullet-list-item">cast/channel times,</span>
+		<span class="bullet-list-item">resource regeneration,</span>
+		<span class="bullet-list-item">ability cooldowns,</span>
+		<span class="bullet-list-item">effects you apply.</span>
+	</p>
+	<p>There's a subtle but important distinction when it comes to alacrity: it's not a flat time reduction, it increases the speed at which things are executed. (Think of it this way: if you double the speed at which you're doing something, i.e. you have 100% alacrity, it halves the time that thing takes, not makes it zero. So the formula is not (original time) * (1 - alacrity) but (original time) / (1 + alacrity)) If you have, for example, 8% alacrity, that means
+		<span class="bullet-list-item">the global cooldown will be 92.59% of the original (1.38 seconds),</span>
+		<span class="bullet-list-item">a 2 second channel will only take 1.85 seconds,</span>
+		<span class="bullet-list-item">in case of an Assassin, you will regain resources at a 8.64 Force per second rate,</span>
+		<span class="bullet-list-item">an ability that would take 12 seconds to be usable again will be ready after 11.11 seconds,</span>
+		<span class="bullet-list-item">a DoT that would take 18 seconds to do its damage will be done in 16.66 seconds.</span>
+	</p>
+	<h5>Alacrity on effects</h5>
+	<p>An interesting property of alacrity is how it affects DoT/HoT times, especially when they get refreshed. For example <a href="https://torcommunity.com/database/ability/je6mYk3">Creeping Terror</a>, one of the main DoTs of Madness/Hatred, takes 18 seconds to do its full damage by default. With 10% alacrity, this is shortened to 16.36 seconds. Here's the part you might not know: the alacrity of a DoT/HoT is determined when it's applied and does not change when it gets refreshed on the target. Let's see how this plays with the Sorcerer ability, <a href="https://torcommunity.com/database/ability/WEBr248">Polarity Shift</a>, which, among other things, provides a 20% alacrity buff. If you apply <a href="https://torcommunity.com/database/ability/je6mYk3">Creeping Terror</a> before using <a href="https://torcommunity.com/database/ability/WEBr248">Polarity Shift</a>, it will use your normal alacrity rate. If you now reapply it using <a href="https://torcommunity.com/database/ability/WEBr248">Polarity Shift</a> without letting it fall off first, you will notice that the DoT does not get a speedup. If, however, you apply it first with the 20% alacrity buff, using the 10% example above, it will keep ticking for only 13.85 seconds only. Even if you refresh it, as long as you don't let it fall off the target, it will keep this tick rate.</p>
+	<p>If you have DoT/HoT effects that can have 100% uptime on the target, it's free DPS/HPS to apply these while your alacrity is the highest and just keep refreshing them.</p>
+	<h5>Alacrity and the GCD</h5>
+	<p>A poster on <a href="https://www.reddit.com/r/swtor/comments/7759os/alacrity_effect_on_gcd_especially_for_classes/">Reddit</a> has noticed that alacrity isn't "smooth" when it comes to the global cooldown, as the global cooldown gets <strong>rounded up</strong> to the nearest tenth of a second. This means that if your GCD would be anywhere above 1.4 seconds, it becomes 1.5 seconds as if you didn't have any alacrity at all. A GCD above 1.3 seconds becomes 1.4 seconds and so on. The more rounding you have, the more time you waste between two activations.</p>
+	<p>The following table lists the amount of alacrity you need to obtain a specific GCD. A GCD of 1.2 seconds would need an alacrity rating of 4625, but the current stat budgets only allow for 3696. Global cooldowns below that are theoretically unobtainable with gear only, as alacrity from gear is hard capped at 30%.</p>
+	<div class="para border">
+		<table>
+			<thead>
+				<tr>
+					<th>GCD (seconds)</th>
+					<th>Minimum alacrity (%)</th>
+					<th>Minimum alacrity (rating)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.5</td>
+					<td>0%</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>1.4</td>
+					<td>7.143%</td>
+					<td>702</td>
+				</tr>
+				<tr>
+					<td>1.3</td>
+					<td>15.385%</td>
+					<td>1857</td>
+				</tr>
+				<tr>
+					<td>1.2</td>
+					<td>25%</td>
+					<td>4625</td>
+				</tr>
+				<tr>
+					<td>1.1</td>
+					<td>36.364%</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>1.0</td>
+					<td>50%</td>
+					<td>-</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<h3>Attack types</h3>
+	<p>Attack types determine what kind of resistance an attack is rolled against, i.e. whether they will hit <em>at all</em>. Attack types are:</p>
+	<ul>
+		<li>Melee (weapon)</li>
+		<li>Ranged (weapon)</li>
+		<li>Force (spell)</li>
+		<li>Tech (spell)</li>
+	</ul>
+	<p>For all intents and purposes, spell (Force and Tech) attacks are the same, they are differentiated only for lore reasons. When you hit anyone with a weapon (Melee or Ranged) attack (referred to as M/R), the flytext number that pops up on your enemy showing how much you hit for is white, therefore these attacks are usually referred to as white damage. Force and Tech (F/T from now on) attacks have their flytext colored yellow, therefore, surprisingly, they are called yellow damage attacks. It is important to know which ability is which kind, because most defensives will only work for one of the two main types. For example <a href="https://torcommunity.com/database/ability/u6lcQ63">Force Shroud</a> provides increased resistance to F/T attacks, but not to M/R.</p>
+	<div class="para border"><figure>
+		<img src="img/gameplay/flytext.png" />
+	</figure></div>
+	<h3>Damage Types</h3>
+	<p>While attack types determine whether an attack will hit your target at all, damage type determines how the damage is mitigated, especially by shielding, and isn't really important in most scenarios, since the active defensive cooldowns are for specific attack types, not damage types. If you're interested anyway, here are the main damage types:</p>
+	<ul>
+		<li>Kinetic</li>
+		<li>Energy</li>
+		<li>Elemental</li>
+		<li>Internal</li>
+	</ul>
+	<p>Kinetic and Energy damage is subject to mitigation by armor and partial absorption by shield. Internal and Elemental damage bypasses both of these and is only mitigated by specific reductions for these damage types, like the <a class="torctip_ability"><img class="icon inline small" src="img/effects/resistant.png" alt="Resistant" />Resistant</a> buff applied by healers.</p>
+	<p>Damaging effects can also have some auxiliary tags attached to them which can also determine their mitigation in some cases, these are mostly:
+		<span class="bullet-list-item">area of effect,</span>
+		<span class="bullet-list-item">direct,</span>
+		<span class="bullet-list-item">periodic</span>
+	damage abilities. These are not necessarily exclusive: an attack can be both area of effect and periodic. (See <a href="https://torcommunity.com/database/ability/8TRqjjE">Toxic Haze</a>, for example.) In some cases it is good to know which of these categories some damage belongs to; <a href="https://torcommunity.com/database/ability/a1PSym0">Saber Reflect</a>, reflects single-target ranged, Force and Tech attacks only, allowing Melee and AoE of any kind to pass through it.</p>
+	<aside>
+		<p>Your only way of knowing what kind of damage an attack deals is by reading its tooltip or checking it in the combat logs. You might notice a lot of them say an attack deals weapon damage, but this simply means the type of damage of your weapon, which, once again, you can see in its tooltip. The mysterious ways of the Force have made it so that all weapons in the game deal Energy damage, making it a no-brainer to figure out.</p>
+		<p>In some special cases attacks don't have a damage type, but these are reserved for game mechanics. Examples include damage from Sudden Death and Fall Damage. Player attacks always have a damage type.</p>
+	</aside>
+	<div class="para border"><figure>
+		<img src="img/gameplay/ability_types.png" alt="Ability types" />
+		<figcaption>The ability window tells you what kind your abilities are of.</figcaption>
+	</figure></div>
+	<h3>Hit mechanics</h3>
+	<p>When you try to land a hit, it's subject to what's called an accuracy roll. The accuracy roll is governed by two main chances: the Accuracy (the chance to hit) of the attacker and the Defense Chance (the chance to avoid the hit) of the target. Accuracy over 100% reduces the target's chance to defend against the attack. Everyone except tanks has a base Accuracy of 100% (101% with the bonus from the companions), a 5% chance to defend against M/R attacks (10% for Inquisitors) and in most cases there's no baseline resistance against F/T. (Tanks have an extra 10% accuarcy provided by their disciplines.) If the attacker's Accuracy is above 100%, the target's chance to defend is lowered by the surplus Accuracy. That means if you're trying to hit a Sorcerer with a M/R attack and you have 104% Accuracy, your target will have their 10% base defense chance reduced by 4%, leaving it at 6% effective. If the accuracy roll fails the attack does not connect and does nothing.</p>
+	<p><strong>Only hostile actions are subject to accuracy rolls: friendly ones (like heals) can never miss or be defended against.</strong></p>
+	<p>Once the hit itself is confirmed, it's time to determine the type of the hit. This has 3 possible outcomes: normal, shielded and/or critical.</p>
+	<p>Every attack has a certain critical chance, that is, by default, determined by the caster's critical chance. Some attacks have 100% critical hit rates (we call these autocrits) while others might just receive some passive buff to their critical chance based on your chosen discipline. Also, if the target has a shield equipped in their offhand slot and the attack deals kinetic or energy damage, the target has a certain chance to shield the attack.</p>
+	<p>The hit has a chance equal to the attacker's critical chance to be a critical hit and a chance equal to the target's shield chance to be a shielded hit.</p>
+	<p>If the type of hit is a critical, it does extra damage according to the attack's critical bonus. If the attack has more than 100% of critical chance, the critical bonus multiplier also gets multiplied by the critical chance. (If the critical bonus is 60%, it does 60% extra damage.) If the hit is shielded, the damage is reduced according to the target's absorption rate.</p>
+	<p>Note that an attack is not the same as an ability activation. Lots of abilities deal multiple hits (you can see multiple flytext numbers popping up). These rolls are calculated for each and every single hit separately.</p>
+	<p>If you're looking for more info on combat mechanics, I strongly recommend to check out the <a href="http://dulfy.net/category/swtor/theorycrafting/">theorycrafting articles</a> on Dulfy, they go into much greater detail.</p>
+	<h3 id="toc-gearing">Gearing</h3>
+	<p>I will not give precise gearing numbers for each discipline; if you are interested in those, please look up a class guide. I will, instead, just talk a bit about gearing in general. Please read and reread everything in the <a href="#toc-abilities">Abilities</a> section until you fully understand it all.</p>
+	<h4>Tanks</h4>
+	<p>Tanks are broken in PvP for a long time now. In PvE most of the damage done by NPCs is M/R and NPCs do not have critical hits, so tanking works properly in PvE: some of the damage is defended against while the rest has some chance to be shielded.</p>
+	<p>In PvP, tank stats are close to being outright useless. If you read carefully till now, you know that Defense Rating only increases your chance to defend against M/R attacks and has absolutely no use against F/T. Most player abilities are F/T, so having lots of Defense Rating stacked gets you absolutely nowhere.</p>
+	<p>Shielding by design doesn't work against I/E damage and the extra survivability gained by having a higher shielding rate is still mostly subpar to the extra damage you can muster by not stacking shielding stats.</p>
+	<p>For PvP you do not gear a tank as a tank. The surviability benefits are minimal while the DPS loss is substantial compared to just gearing like to a damage dealer. (This method of gearing is called skank gearing.)</p>
+	<p>If you're playing a skank, get tank armorings along with the tank setbonus, use a shield as an offhand (not a generator/focus), otherwise gear as a DPS, choosing high-endurance modifications (distinguished in their name with the letter B, for example <a href="https://torcommunity.com/database/item/myBMCtF">Lethal Mod 52B</a>) instead of the standard low-endurance ones. You do not need any accuracy for tanks, as the discipline passives will provide an extra 10% for you.</p>
+	<p>At this time properly best-in-slot gearing a skank is a quite long process, especially since the legendary B mods only drop as separate items from command crates and they have an <em>extremely</em> low drop rate.</p>
+	<h4>Damage dealers</h4>
+	<p>As a damage dealer you should focus on Mastery/Power as your primary/secondary stat, while getting as much Critical Rating, Alacrity Rating and Accuracy as you need. (Refer to class guides for the exact propotions.)</p>
+	<p>There's an ongoing debate whether you actually need Accuracy in PvP. Some people will say no, you absolutely don't, while others will claim that some Accuracy cannot hurt.</p>
+	<p>Because most of your enemies will have 0% chance to resist F/T attacks, if most of your attacks are of this kind, it's obvious you should not use any Accuracy: the default 100% will suffice. If, however, the discipline you're playing has some significant M/R damage, it is a sane decision to have some extra Accuracy to counter the natural defenses. Personally I'd recommend 5% as it covers the base defense chance. You can also decide to not use any Accuracy at all and invest those points in higher damage, but then be prepared that some of your attacks will miss. It is up to you to decide whether the extra damage is worth the missed attacks or not.</p>
+	<h4>Healers</h4>
+	<p>Same as damage dealers, except you have zero need for Accuracy.</p>
+	<h4>Set bonuses</h4>
+	<p>Set bonuses are advanced class/role specific bonuses you can collect. If you get a piece of gear with a setbonus, the bonus is tied to the armoring in it, so you can freely move it around while not losing the bonus. Each set has 3 bonuses, having one for 2, one for 4 and one for 6 pieces of the same set equipped. Unlike in some other games, there's no point in mixing various setbonuses, you should only go with the one that's for your discipline.</p>
+	<div class="para border"><figure>
+		<img src="img/gameplay/setbonus.png" alt="6-piece setbonus for DPS Powertech."/>
+		<figcaption>6-piece setbonus for DPS Powertech.</figcaption>
+	</figure></div>
+	<div class="para border">
+	<div class="expansible-container">
+		<div class="expansible-content"><table>
+		<thead>
+			<tr>
+				<th>Advanced class</th>
+				<th>Role</th>
+				<th>Setbonus name</th>
+				<th>Effects</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/></td>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Force-Master</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/GPNEPMB">Thundering Blast</a> or <a href="https://torcommunity.com/database/ability/nksk6g6">Force Leech</a> increase damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 seconds.</p>
+					<p class="nomargin">(4) Reduces cost of <a href="https://torcommunity.com/database/ability/yUiAeL8">Lightning Bolt</a> and <a href="https://torcommunity.com/database/ability/p51upR5">Force Lightning</a> by 2 and reduces the cooldown of <a href="https://torcommunity.com/database/ability/WEBr248">Polarity Shift</a> by 15 seconds.</p>
+					<p class="nomargin">(6) Increases <a href="https://torcommunity.com/database/ability/uMyzl4x">Recklessness</a> charges by 1.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/heal.png" alt="Heal"/></td>
+				<td>Force-Mystic</td>
+				<td>
+					<p class="nomargin">(2) Activating a healing ability has a 15% chance to grant Force-Mystic's Critical Bonus which causes your next <a href="https://torcommunity.com/database/ability/POaizoG">Dark Infusion</a> to be a critical. This effect can only occur once every 30 seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/j5GMHv0">Consuming Darkness</a> restore an additional 5 Force.</p>
+					<p class="nomargin">(6) Reduces cooldown of <a href="https://torcommunity.com/database/ability/24Q9zfB">Innervate</a> by 1.5 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/></td>
+				<td><img src="img/roles/tank.png" alt="Tank"/></td>
+				<td>Survivor</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/Fzxc3i9">Wither</a> increases damage reduction by 2% for 3 seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/Fzxc3i9">Wither</a> reduces the cooldown of <a href="https://torcommunity.com/database/ability/iSziyyI">Mind Control</a> and <a href="https://torcommunity.com/database/ability/wffD5bD">Mass Mind Control</a> by 2 seconds per activation.</p>
+					<p class="nomargin">(6) <a href="https://torcommunity.com/database/ability/RpyQls8">Deflection</a>'s duration is increased by 3 seconds and its cooldown is reduced by 10 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Stalker</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/cA65NyH">Ball Lightning</a> and <a href="https://torcommunity.com/database/ability/MxBts6D">Leeching Strike</a> increase damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 of seconds.</p>
+					<p class="nomargin">(4) Reduces the cooldown of <a href="https://torcommunity.com/database/ability/uMyzl4x">Recklessness</a> by 15 seconds.</p>
+					<p class="nomargin">(6) After activating <a href="https://torcommunity.com/database/ability/QUfGIWF">Voltaic Slash</a> and <a href="https://torcommunity.com/database/ability/TLmOcu3">Thrash</a> your next <a href="https://torcommunity.com/database/ability/Me3QM49">Assassinate</a> and <a href="https://torcommunity.com/database/ability/Zu9vRMC">Maul</a> will critically hit. This effect can only occur once every minute.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/></td>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Weaponmaster</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/TIhdFZ4">Battering Assault</a> increases damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 of seconds.</p>
+					<p class="nomargin">(4) Reduces the cooldown of <a href="https://torcommunity.com/database/ability/7tbOT80">Frenzy</a> by 15 seconds. Additionally, activating <a href="https://torcommunity.com/database/ability/lPcsJeD">Berserk</a> increases all damage dealt by 3% for 10 seconds.</p>
+					<p class="nomargin">(6) Activating <a href="https://torcommunity.com/database/ability/fQAlH29">Ravage</a> or <a href="https://torcommunity.com/database/ability/ywBVhWO">Dual Saber Throw</a> will grant Weaponmaster's/Challenger's Critical Bonus making your next <a href="https://torcommunity.com/database/ability/y7YKYXG">Gore</a>, <a href="https://torcommunity.com/database/ability/2KayFU2">Furious Strike</a> and <a href="https://torcommunity.com/database/ability/BF2qoL1">Annihilate</a> critically hit. This effect can't occur more than once every minute.</p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/></td>
+				<td><img src="img/roles/tank.png" alt="Tank"/></td>
+				<td>War Leader</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/M2IIlB8">Crushing Blow</a> increases damage reduction by 2% for 4 seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/0dVzj8Q">Force Scream</a> reduces the cooldown of <a href="https://torcommunity.com/database/ability/fybuEfP">Taunt</a> or <a href="https://torcommunity.com/database/ability/a4NfsG1">Threatening Scream</a> by 2 seconds per activation.</p>
+					<p class="nomargin">(6) Increases the duration of <a href="https://torcommunity.com/database/ability/2sHDJUF">Blade Turning</a> by 3 seconds, and the duration of <a href="https://torcommunity.com/database/ability/uNNsGzG">Invincible</a> by 5 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Vindicator</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/ZEEl9d0">Sundering Assault</a> increases damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 of seconds.</p>
+					<p class="nomargin">(4) Increases the critical chance of <a href="https://torcommunity.com/database/ability/fQAlH29">Ravage</a> by 5%.</p>
+					<p class="nomargin">(6) Activating <a href="https://torcommunity.com/database/ability/0dVzj8Q">Force Scream</a> will grant Vindicator's Critical Bonus making your next <a href="https://torcommunity.com/database/ability/dYwCjW2">Impale</a> and <a href="https://torcommunity.com/database/ability/2KayFU2">Furious Strike</a> critically hit. This effect cannot occur more than once every minute.</p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/operative.png" alt="Operative"/></td>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Enforcer</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/wIG8ID1">Laceration</a> and <a href="https://torcommunity.com/database/ability/XTk9Hs5">Corrosive Assault</a> increase damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/EsySjFA">Backstab</a> and <a href="https://torcommunity.com/database/ability/KVQQNC4">Lethal Strike</a>'s energy cost is reduced by 2.</p>
+					<p class="nomargin">(6) Activating <a href="https://torcommunity.com/database/ability/s5wbDyQ">Shiv</a> and <a href="https://torcommunity.com/database/ability/sLSQOMA">Veiled Strike</a> will grant Enforcer's Critical Bonus making your next <a href="https://torcommunity.com/database/ability/2t3K620">Volatile Substance</a> and <a href="https://torcommunity.com/database/ability/XTk9Hs5">Corrosive Assault</a> critically hit. This effect can only occur once every minute.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/heal.png" alt="Heal"/></td>
+				<td>Field Medic</td>
+				<td>
+					<p class="nomargin">(2) Activating a healing ability has a 15% chance to grant Field Medic's Critical Bonus which causes your next <a href="https://torcommunity.com/database/ability/d7yirbK">Kolto Injection</a> to be a critical. This effect can only occur once every 30 seconds.</p>
+					<p class="nomargin">(4) Reduces the energy cost of <a href="https://torcommunity.com/database/ability/l30oFpA">Kolto Infusion</a> by 2.</p>
+					<p class="nomargin">(6) Reduces the cooldown of <a href="https://torcommunity.com/database/ability/7pIq8NB">Recuperative Nanotech</a> by 3 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/class_icons/sniper.png" alt="Sniper"/></td>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Field Tech</td>
+				<td>
+					<p class="nomargin">(2) Activating <a href="https://torcommunity.com/database/ability/zV9TpQP">Explosive Probe</a>, <a href="https://torcommunity.com/database/ability/QzQOUAB">Ambush</a> and <a href="https://torcommunity.com/database/ability/3THZIyH">Lethal Shot</a> increases damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 of seconds.</p>
+					<p class="nomargin">(4) Reduces the cooldown of <a href="https://torcommunity.com/database/ability/RSeWn9A">Target Acquired</a> by 15 seconds, and activating either ability restores 15 energy.</p>
+					<p class="nomargin">(6) <a href="https://torcommunity.com/database/ability/CFcwhs5">Laze Target</a> now has 2 charges and its duration is doubled.</p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/mercenary.png" alt="Mercenary"/></td>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Eliminator</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/gquLG08">Heatseeker Missiles</a> and <a href="https://torcommunity.com/database/ability/1qgq9m9">Serrated Shot</a> increase damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 of seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/yd8yLmH">Energy Shield</a>'s cooldown is reduced by 15 seconds.</p>
+					<p class="nomargin">(6) Activating <a href="https://torcommunity.com/database/ability/3g5LSr8">Unload</a> and <a href="https://torcommunity.com/database/ability/AcCyVlA">Blazing Bolts</a> will grant Eliminator's Critical Bonus making your next <a href="https://torcommunity.com/database/ability/gquLG08">Heatseeker Missiles</a> and <a href="https://torcommunity.com/database/ability/JyNSTuP">Mag Shot</a> critically hit. This effect can only occur once a minute.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/heal.png" alt="Heal"/></td>
+				<td>Combat Medic</td>
+				<td>
+					<p class="nomargin">(2) Activating a healing ability has a 15% chance to grant Combat Medic's Critical Bonus which causes your next <a href="https://torcommunity.com/database/ability/VZtu5k5">Rapid Scan</a> to be a critical. This effect can only occur once every 30 seconds.</p>
+					<p class="nomargin">(4) The duration of <a href="https://torcommunity.com/database/ability/BjqymCB">Supercharged Gas</a> is increased by 4 seconds.</p>
+					<p class="nomargin">(6) Reduces the cooldown of <a href="https://torcommunity.com/database/ability/Sxz8T73">Healing Scan</a> by 1.5 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2"><img src="img/class_icons/powertech.png" alt="Powertech"/></td>
+				<td><img src="img/roles/tank.png" alt="Tank"/></td>
+				<td>Supercommando</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/Q2RLIv3">Heat Blast</a> increases damage reduction by 2% for 5 seconds.</p>
+					<p class="nomargin">(4) While <a href="https://torcommunity.com/database/ability/eFwP6gC">Ion Gas Cylinder</a> is active, <a href="https://torcommunity.com/database/ability/KxeyrfH">Rocket Punch</a> reduce the cooldowns of <a href="https://torcommunity.com/database/ability/L9FzlD5">Neural Dart</a> and <a href="https://torcommunity.com/database/ability/ndiFh2A">Sonic Missile</a> by 2 seconds.</p>
+					<p class="nomargin">(6) Increases the duration of <a href="https://torcommunity.com/database/ability/TpTRDD5">Oil Slick</a> by 3 seconds and the duration of <a href="https://torcommunity.com/database/ability/yd8yLmH">Energy Shield</a> by 4 seconds.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="img/roles/damage.png" alt="Damage"/></td>
+				<td>Combat Tech</td>
+				<td>
+					<p class="nomargin">(2) <a href="https://torcommunity.com/database/ability/bL5iqaF">Flaming Fist</a> and <a href="https://torcommunity.com/database/ability/JrlZDBC">Magnetic Blast</a> increase damage dealt by 2% for 15 seconds. Cannot occur more than once every 30 seconds.</p>
+					<p class="nomargin">(4) <a href="https://torcommunity.com/database/ability/bL5iqaF">Flaming Fist</a> and <a href="https://torcommunity.com/database/ability/KxeyrfH">Rocket Punch</a>'s heat is reduced by 2.</p>
+					<p class="nomargin">(6) Activating <a href="https://torcommunity.com/database/ability/fIr8oXA">Flame Burst</a> and <a href="https://torcommunity.com/database/ability/JrlZDBC">Magnetic Blast</a> will grant Combat Tech's Critical Bonus making one of your next <a href="https://torcommunity.com/database/ability/PQmOWg6">Energy Burst</a> and <a href="https://torcommunity.com/database/ability/ZoPdX3C">Immolate</a> critically hit. This effect can't occur more than once every minute.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table></div>
+		<a class="expansible-expander">Show full table</a>
+	</div></div>
+	<h3>Consumables</h3>
+	<p>Consumables are single-use items you can use to power up your character.</p>
+	<h4>Stims</h4>
+	<p>Stims are long-lasting powerups, crafted by Biochemists. The Artifact (purple) version of the stims last for 8 hours and provides the most stats. You can either craft them for yourself or buy them from the GTN.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="https://torcommunity.com/database/item/zracfpP">Advanced Polybiotic Fortitude Stim</a>
+				</td>
+				<td>Increases Endurance by 240 and Defense by 99 for 480 minutes. Only one stimpack can be active at a time. This effect persists through defeat.</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="https://torcommunity.com/database/item/7t66kl0">Advanced Polybiotic Proficient Stim</a>
+				</td>
+				<td>Increases Accuracy by 240 and Critical Rating by 99 for 480 minutes. Only one stimpack can be active at a time. This effect persists through defeat.</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="https://torcommunity.com/database/item/kGsNiW8">Advanced Polybiotic Versatile Stim</a>
+				</td>
+				<td>Increases Mastery by 240 and Power by 99 for 480 minutes. Only one stimpack can be active at a time. This effect persists through defeat.</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<p>In general, the Fortitude stims are recommended for tanks, Proficiency ones for damage dealers that use lots of white attacks and need Accuracy in addition to what they get from gear, Versatile ones for everyone else.</p>
+	<p>Be aware that the latest stims share their names with the previous tier ones, but those provide less stats. Always be sure to check the icon before you craft/buy!</p>
+	<p>If you have Biochem as your crafting skill, you will be able to use the reusable version of the stims. While these still need to be refreshed every 8 hours, the item is infinitely usable.</p>
+	<h4>Warzone consumables</h4>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/lt1Ejx4">Warzone Medpac</a></td>
+				<td>Immediately restores 35% of maximum health. Only usable in Player versus Player environments. Only usable once per fight. (Cooldown: 1.5 minutes)</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/X3aKAL5">Advanced Polybiotic Medpac MK-2</a></td>
+				<td>Restores health and additional health over 15 seconds. Only usable once per fight. (Cooldown: 1.5 minutes). Health restored scales by level up to level 70.</td>
+			</tr>			<tr>
+				<td><a href="https://torcommunity.com/database/item/pcuGAXD">Warzone Adrenal</a></td>
+				<td>Increases damage reduction by 15% for 15 seconds while fighting other players. Only usable in Player versus Player environments. (Cooldown: 3 minutes)</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<p><a href="https://torcommunity.com/database/item/lt1Ejx4">Warzone Medpac</a> and <a href="https://torcommunity.com/database/item/pcuGAXD">Warzone Adrenal</a> come as a reward from the daily PvP missions as well as they are purchaseable from vendors both on the Fleet and in warzones (except in arenas), while <a href="https://torcommunity.com/database/item/X3aKAL5">Advanced Polybiotic Medpac MK-2</a> is crafted and only usable by Biochemists. Medpacs can be used only once per fight, but stealthers can use <a href="https://torcommunity.com/database/ability/CdPifNB">Force Cloak</a>/<a href="https://torcommunity.com/database/ability/HxMU3yP">Cloaking Screen</a> to get out of combat and reset this limit. (All medpacs share a common cooldown, so you cannot use both during a single fight.) Adrenals don't have this restriction.</p>
+	<h4>Grenades</h4>
+	<p>Should you find the amount of CC in the game inadequate, grenades come to the rescue. They are crafted by Cybertechs, and, like stims, you can either make them yourself or buy them on the GTN. While situationally useful, you can still perform just fine if you choose to not use them. The most common type of grenade used by PvP'ers is the Seismic one. Players affected by these grenades receive the <a class="torctip_ability"><img class="icon ability small" src="img/effects/bastioned.png" alt="Bastioned" />Bastioned</a> buff, making them immune to further consumable grenades for 3 minutes.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/iDipyj9">Advanced V-9 Pyro Grenade</a></td>
+				<td>Sets up to 5 enemy targets in a 6 meter area ablaze, dealing elemental damage over 12 seconds. (Cooldown: 180s). Damage dealt scales by level up to level 65.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/bpMhik9">Advanced V-9 Electro-Stun Grenade</a></td>
+				<td>Shocks up to 3 targets in the area for energy damage, and stuns them briefly. Tougher enemies are stunned for a shorter duration. (Cooldown: 180s). Damage dealt scales by level up to level 65.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/fc6PQID">Advanced V-9 Cartel Waste Grenade</a></td>
+				<td>Deals kinetic damage to up to 5 targets within 6 meters of the selected area, and reduces movement speed by 70% for 9 seconds. (Cooldown: 180s). Damage dealt scales by level up to level 65.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/item/zLQYTNS">Advanced V-9 Seismic Grenade</a></td>
+				<td>Disrupts the earth beneath all targets within 6 meters of the selected area, dealing kinetic damage and knocking them unconscious for 5 seconds. Damage causes this effect to end prematurely. (Cooldown: 180s). Damage dealt scales by level up to level 65.</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h2 id="toc-effects">Effects</h2>
+	<p>Effects, further categorized into positive (buffs) and negative (debuffs) are displayed on your UI, (by default) above your character portrait. With a few notable exceptions, buffs can be dispelled (right-click on their icon; "click off"), while you have to suffer through the debuffs.</p>
+	<div class="para border"><figure>
+		<img src="img/gameplay/effects.png" alt="Displayed effects" />
+		<figcaption>Buffs to the left, debuffs to the right.</figcaption>
+		</figure>
+	</div>
+	<p>There are 3 cases where it might be beneficial to manually click off buffs:</p>
+	<ul>
+		<li><a href="https://torcommunity.com/database/ability/zV7uruK">Static Barrier</a> to trigger <a class="torctip_ability"><img class="icon ability small" src="img/utilities/sorcerer/backlash.png" alt="Backlash" />Backlash</a></li>
+		<li><a href="https://torcommunity.com/database/ability/gnkaSa6">Phase Walk</a> to relocate it if you're within range,</li>
+		<li><a href="https://torcommunity.com/database/ability/yd8yLmH">Energy Shield</a> to trigger the healing of <a class="torctip_ability"><img class="icon ability small" src="img/utilities/mercenary/trauma_regulators.png" alt="Trauma Regulators" />Trauma Regulators</a> early.</li>
+	</ul>
+	<p>There are lots of effects in the game and it would be near impossible to list them all. Most of them are just damaging abilites either with the same icon as the ability they are applied by (you can, for example, see the debuff from <a href="https://torcommunity.com/database/ability/wlEaaIC">Affliction</a> on the screenshot above, which is just the DoT from the respective Sorcerer ability.) In the table below you will find some of the most common and important general buffs/debuffs you will meet during PvP. If you want to check out each effect the game has in detail, head over to Jedipedia, where they have all abilities dissected. Note that icons are reused a lot in the game, so it is entirely possible that you will sometime see the same icon with an entirely different effect. Again, the list is by no means exhaustive.</p>
+	<div class="para border"><table>
+		<thead>
+			<tr>
+				<th colspan="2">Effect</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3"><h4 class="internal-header">Positive effects (buffs)</h4></td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/unshakable.png" alt="Unshakable" />
+				</td>
+				<td>Unshakable</td>
+				<td>Cannot be interrupted.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/bastioned.png" alt="Bastioned" />
+				</td>
+				<td>Bastioned</td>
+				<td>Protected from Cybertech Grenades.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/guard.png" alt="Guard" />
+				</td>
+				<td rowspan="2">Guard</td>
+				<td>Damage taken and threat generation reduced. Redirecting 50% of damage from players.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/guard_out_of_range.png" alt="Out of range" />
+				</td>
+				<td>Out of range</td>
+			</tr>
+			<tr>
+				<td colspan="3"><h4 class="internal-header">Negative effects (debuffs)</h4></td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/slowed.png" alt="Slowed" />
+				</td>
+				<td>Slowed</td>
+				<td>Movement speed reduced.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/trauma.png" alt="Trauma" />
+				</td>
+				<td>Trauma</td>
+				<td>Healing received reduced by 20%.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/stunned.png" alt="Stunned" />
+				</td>
+				<td>Stunned</td>
+				<td>Unable to act.</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/afraid.png" alt="Afraid" />
+				</td>
+				<td>Afraid</td>
+				<td rowspan="5">Unable to act. Breaks on damage.</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img class="icon effect small" src="img/effects/asleep.png" alt="Asleep" />
+				</td>
+				<td>Sleeping</td>
+			</tr>
+			<tr>
+				<td>Blinded</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img class="icon effect small" src="img/effects/lifted.png" alt="Lifted" />
+				</td>
+				<td>Lifted</td>
+			</tr>
+			<tr>
+				<td>Incapacitated</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="icon effect small" src="img/effects/hindered.png" alt="Hindered" />
+				</td>
+				<td>Hindered</td>
+				<td>Cannot activate or benefit from high mobility actions.</td>
+			</tr>
+		</tbody>
+	</table></div>
+
+		<h3>Control effects</h3>
+
+			<p>CC (Crowd Control) is the umbrella term for abilities that can be used to control your enemies. While it's mostly used to refer to incapacitating effects (hardstun/mez), it also includes ballistics (push/pull) and movement impairment (slow/root).</p>
+
+			<h4>Incapacitating</h4>
+				<p>There are 2 kinds of incapacitating CC: hard and soft stuns (mezzes). Every class has access to a hard stun and all except Powertech have a mez. General hard stuns have a 4 second duration, while mezzes, except that of the Warriors, are 8 seconds. Tank classes also have a second, shorter hard stun.</p>
+				<p>Unlike hard stuns, mezzes end prematurely if their target takes any kind of damage. <strong>This includes damage from periodic effects.</strong> It is pointless to mez anyone that has any <a href="#glossary-term-dot">DoT</a> on them or is being focused. (Except: Lethality/Virulence, as their mez doesn't break <em>from their own</em> DoTs.) Some exceptions apply (like using your mez as an interrupt), but in general only ever mez unbothered hostiles.</p>
+	<div class="border"><table id="table-stuns">
+		<thead>
+			<tr>
+				<th colspan="2">Class</th>
+				<th>Ability</th>
+				<th>Duration (seconds)</th>
+				<th>Effect Type</th>
+				<th>Dispel Type</th>
+				<th>Target</th>
+				<th>Comment</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="3" style="background: linear-gradient(rgba(50, 78, 221, 0), rgba(50, 78, 221, 1));">
+					<img src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/>
+				</td>
+				<td></td>
+				<td><a href="https://torcommunity.com/database/ability/zV7uruK">Static Barrier</a></td>
+				<td>3</td>
+				<td><img src="img/effects/blinded.png" class="icon effect small" alt="Blinded" /></td>
+				<td>F</td>
+				<td>AoE (5 meters of user)</td>
+				<td>Stun only applied with the <a class="torctip_ability"><img class="icon ability small" src="img/utilities/sorcerer/backlash.png" alt="Backlash" />Backlash</a> utility.</td>
+			</tr>
+			<tr>
+				<td rowspan="5" class="center" style="background: linear-gradient(rgba(76, 175, 217, 1), rgba(76, 175, 217, 0));">
+					<img src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+				</td>
+				<td><a href="https://torcommunity.com/database/ability/zDRbXEI">Electrocute</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>F</td>
+				<td>Single</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/4cvksN0">Whirlwind</a></td>
+				<td>8</td>
+				<td><img src="img/effects/lifted.png" class="icon effect small" alt="Lifted" /></td>
+				<td>F</td>
+				<td>Single</td>
+				<td>2 second cast; can be made instant with the <a class="torctip_ability"><img class="icon ability small" src="img/utilities/assassin/haunted_dreams.png" alt="Haunted Dreams" />Haunted Dreams</a> utility.</td>
+			</tr>
+			<tr>
+				<td rowspan="3"></td>
+				<td><a href="https://torcommunity.com/database/ability/ckGzKnM">Mind Trap</a></td>
+				<td>8</td>
+				<td><img src="img/effects/asleep.png" class="icon effect small" alt="Asleep" /></td>
+				<td>M</td>
+				<td>Single</td>
+				<td>Only usable from stealth on targets not in combat. No cooldown but only one target can be affected at a time.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/VfcQB17">Spike</a></td>
+				<td>2</td>
+				<td><img src="img/effects/knockdown.png" class="icon effect small" alt="Knockdown" /></td>
+				<td></td>
+				<td>Single</td>
+				<td>Only usable from stealth, except for <a class="torctip_ability"><img src="img/disciplines/assassin/darkness.png" class="icon ability small" alt="Darkness" />Darkness</a>.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/KkJxqj6">Low Slash</a></td>
+				<td>4</td>
+				<td><img src="img/effects/lifted.png" class="icon effect small" alt="Lifted" /></td>
+				<td>P</td>
+				<td>Single</td>
+				<td><a class="torctip_ability"><img src="img/disciplines/assassin/deception.png" class="icon ability small" alt="Deception" />Deception</a> only.</td>
+			</tr>
+			<tr>
+				<td rowspan="4" style="background: linear-gradient(rgba(111, 82, 175, 0), rgba(111, 82, 175, 1));">
+					<img src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+				</td>
+				<td rowspan="2"></td>
+				<td><a href="https://torcommunity.com/database/ability/J4rSfx7">Backhand</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>F</td>
+				<td>Single</td>
+				<td><a class="torctip_ability"><img class="icon ability small" src="img/disciplines/juggernaut/immortal.png" alt="Immortal" />Immortal</a> only.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/p4SCjs5">Force Push</a></td>
+				<td>2</td>
+				<td><img src="img/effects/knockdown.png" class="icon effect small" alt="Knockdown" /></td>
+				<td></td>
+				<td>Single</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2" class="center" style="background: linear-gradient(rgba(214, 31, 36, 1), rgba(214, 31, 36, 0));">
+					<img src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+				</td>
+				<td><a href="https://torcommunity.com/database/ability/csyE6wL">Force Choke</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>F</td>
+				<td>Single</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/1WHhjhF">Intimidating Roar</a></td>
+				<td>6</td>
+				<td><img src="img/effects/afraid.png" class="icon effect small" alt="Afraid" /></td>
+				<td>M</td>
+				<td>AoE (8 meters of user)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="3" style="background: linear-gradient(rgba(200, 107, 18, 0), rgba(200, 107, 18, 1));">
+					<img src="img/class_icons/operative.png" alt="Operative"/>
+				</td>
+				<td rowspan="2"></td>
+				<td><a href="https://torcommunity.com/database/ability/xxjLJ01">Sleep Dart</a></td>
+				<td>8</td>
+				<td><img src="img/effects/asleep.png" class="icon effect small" alt="Asleep" /></td>
+				<td>M</td>
+				<td>Single</td>
+				<td>Only usable from stealth on targets not in combat. No cooldown but only one target can be affected at a time.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/pEDM5U5">Debilitate</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>P</td>
+				<td>Single</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="center" style="background: linear-gradient(rgba(220, 224, 69, 1), rgba(220, 224, 69, 0));">
+					<img src="img/class_icons/sniper.png" alt="Sniper"/>
+				</td>
+				<td><a href="https://torcommunity.com/database/ability/kQNxeB3">Flash Bang</a></td>
+				<td>8</td>
+				<td><img src="img/effects/blinded.png" class="icon effect small" alt="Blinded" /></td>
+				<td>T</td>
+				<td>Single/AoE (5 meters of primary target)</td>
+				<td>For Operatives, the mez is AoE within 5 meters of the primary target; for Sniper, it's single target.</td>
+			</tr>
+			<tr>
+				<td rowspan="2"></td>
+				<td><a href="https://torcommunity.com/database/ability/33XImoD">Maim</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>P</td>
+				<td>Single</td>
+				<td>Ranged ability, not Force/Tech.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/HLTAtoB">EMP Discharge</a></td>
+				<td>2</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td></td>
+				<td>Single</td>
+				<td>Stun only applied to targets affected by <a href="https://torcommunity.com/database/ability/tSczEz4">Plasma Probe</a>.</td>
+			</tr>
+			<tr>
+				<td rowspan="2" style="background: linear-gradient(rgba(44, 143, 74, 0), rgba(44, 143, 74, 1));">
+					<img src="img/class_icons/mercenary.png" alt="Mercenary"/>
+				</td>
+				<td></td>
+				<td><a href="https://torcommunity.com/database/ability/cKMPcp7">Concussion Missile</a></td>
+				<td>8</td>
+				<td><img src="img/effects/asleep.png" class="icon effect small" alt="Asleep" /></td>
+				<td>M</td>
+				<td>Single</td>
+				<td>1.5 second cast; cast can be avoided using <a href="https://torcommunity.com/database/ability/uF3P25D">Power Surge</a>.</td>
+			</tr>
+			<tr>
+				<td rowspan="2" class="center" style="background: linear-gradient(rgba(119, 181, 53, 1), rgba(119, 181, 53, 0));">
+					<img src="img/class_icons/powertech.png" alt="Powertech"/>
+				</td>
+				<td><a href="https://torcommunity.com/database/ability/9ioDkU5">Electro Dart</a></td>
+				<td>4</td>
+				<td><img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" /></td>
+				<td>T</td>
+				<td>Single</td>
+				<td>Can be extended to 5 seconds for Powertechs with the <a class="torctip_ability"><img class="icon ability small" src="img/utilities/powertech/enhanced_paralytics.png" alt="Enhanced Paralytics" />Enhanced Paralytics</a> utility.</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href="https://torcommunity.com/database/ability/8ttbjr3">Carbonize</a></td>
+				<td>2.5</td>
+				<td><img src="img/effects/carbonized.png" class="icon effect small" alt="Carbonized" /></td>
+				<td></td>
+				<td>AoE (8 meters of user)</td>
+				<td>Can be extended to 3 seconds with the <a class="torctip_ability"><img class="icon ability small" src="img/utilities/powertech/enhanced_paralytics.png" alt="Enhanced Paralytics" />Enhanced Paralytics</a> utility.</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<p>The Effect Type colum contains the icon of the applied effects while the Dispel Type tells you what kind of cleansing can remove the effect (F = Force, T = Tech, M = Mental, P = Physical). (More on that later.)</p>
+	<div class="border"><table>
+		<thead>
+			<tr>
+				<th colspan="2">Effect Type</th>
+				<th>Breaks on Damage</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<img src="img/effects/stunned.png" class="icon effect small" alt="Stunned" />
+				</td>
+				<td>Stunned</td>
+				<td rowspan="3">No</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/effects/knockdown.png" class="icon effect small" alt="Knockdown" />
+				</td>
+				<td>Knockdown</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/effects/carbonized.png" class="icon effect small" alt="Carbonized" />
+				</td>
+				<td>Carbonized</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img src="img/effects/blinded.png" class="icon effect small" alt="Blinded" />
+				</td>
+				<td>Blinded</td>
+				<td rowspan="5">Yes</td>
+			</tr>
+			<tr>
+				<td>Asleep</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img src="img/effects/lifted.png" class="icon effect small" alt="Lifted" />
+				</td>
+				<td>Lifted</td>
+			</tr>
+			<tr>
+				<td>Incapacitated</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="img/effects/afraid.png" class="icon effect small" alt="Afraid" />
+				</td>
+				<td>Afraid</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h3>Hindering</h3>
+		<div class="thirdwidth floater-right">
+			<div class="torctip_tooltip">
+				<div class="torctip_image torctip_image_ability torctip_image_inset">
+					<img src="img/effects/hindered.png" alt="Hindered" />
+				</div>
+				<span class="torctip_ability">Hindered</span>
+				<div class="torctip_white">Cannot activate or benefit from high mobility actions.</div>
+			</div>
+		</div>
+	<p>Hindering is a "quasi-CC" effect that doesn't count as control, but can easily be seen as one. The point of hindering is that it diables "high mobility actions and escapes", making the targets susceptible to being burst down. The main source of hindering in the game is <a href="https://torcommunity.com/database/ability/ycQmPDP">Electro Net</a>, a Mercenary-exclusive ability. Other sources include Marauders' <a href="https://torcommunity.com/database/ability/y7YKYXG">Gore</a> and the acid traps in the Quesh Huttball map. While <a href="https://torcommunity.com/database/ability/y7YKYXG">Gore</a> can be timed well to be effective, its 1.5 second duration of hindering usually isn't too punishing. Hindering, unlike control effects, does <strong>not build or is affected by <a href="#toc-resolve">Resolve</a></strong>. This means you can effectively use <a href="https://torcommunity.com/database/ability/ycQmPDP">Electro Net</a> on a whitebarred target to almost fully negate it.</p>
+	<h4>Electro Net</h4>
+	<div class="thirdwidth floater-right">
+		<div class="torctip_tooltip">
+			<div class="torctip_image torctip_image_ability torctip_image_inset">
+				<img src="img/abilities/bounty_hunter/mercenary/electro_net.png" alt="Electro Net" />
+			</div>
+			<span class="torctip_ability">Electro Net</span>
+			<div>
+				<span class="torctip_white">Instant</span>
+			</div>
+			<br />
+			<div>
+				<div>
+					<span class="torctip_val">Energy:</span><span class="torctip_white">10</span>
+				</div>
+				<div>
+					<span class="torctip_val">Cooldown:</span><span class="torctip_white">90s</span>
+				</div>
+				<div>
+					<span class="torctip_val">Range:</span><span class="torctip_white">30m</span>
+				</div>
+			</div>
+			<br />
+			<div class="torctip_white">Fires an electro net that ensnares the target, reducing its movement speed by 50% and dealing energy damage over 9 seconds. While affected, a target that moves takes 20% more damage from electro net, and this effect can stack up to 10 times on enemy players or 5 times on any other target. Additionally, the electro net hinders the target, preventing the use of high mobility actions and escapes such as charges, vanishes, and speed boosts. Lasts 9 seconds.</div>
+		</div>
+	</div>
+	<aside>Electro Net was originally designed back in 2.0 to counter the extra mobility and escapes the classes received (<a href="https://torcommunity.com/database/ability/kMLwa18">Force Barrier</a>, <a href="https://torcommunity.com/database/ability/gnkaSa6">Phase Walk</a> (which was originally for Assassins), <a href="https://torcommunity.com/database/ability/zPHFjRI">Exfiltrate</a>).</aside>
+	<p>Electro Net has 3 distinct effects: a slow, the hindering and the damage. Electo Net's damage is minimal if you don't move while it is on you, but even if you do, even with the 200% damage increase it's not your biggest concern.</p>
+	<p>It's the hindering that kills. When E-Net is applied, it comes with a 50% slow and the dreaded hindering that disables the use of escapes and high-mobility actions, and, just for the hate of Sorcerers, Force Barrier, which is neither.</p>
+	<p>If you get netted at low health, do not expect to survive it, unless you have your CC breaker or other strong defensives available. There's only one thing that can partially counter Electro Net, and that's your CC breaker. I said partially, because while it removes the hindering effect and the associated slow, the damage-over-time component of Electro Net is unremovable, even by purging. So even if you break it, do not expect to stealth out and stay hidden for long, because the damage will break your stealth.</p>
+	<p>The only way to avoid Electro Net is to resist it altogether (have the immunity from <a href="https://torcommunity.com/database/ability/kMLwa18">Force Barrier</a>, <a href="https://torcommunity.com/database/ability/u6lcQ63">Force Shroud</a>, <a href="https://torcommunity.com/database/ability/7razXwV">Mad Dash</a>, <a href="https://torcommunity.com/database/ability/zPHFjRI">Exfiltrate</a> (for Concealment), <a href="https://torcommunity.com/database/ability/wboKxm2">Covered Escape</a> or some other tech resistance up when the Net hits you, or reduce the Merc's tech accuracy (if you have such an ability) and hope for a miss). Also, the slow component of Electo Net will not be applied if you are immune to movement-impairing effects when it lands.</p>
+	<h4>Abilities disabled by Electro Net</h4>
+	<div class="fullwidth">
+		<div class="quarterwidth inline-block topalign">
+			<h4>Sith Inquisitor</h4>
+			<ul>
+				<li><a href="https://torcommunity.com/database/ability/HOakDk4">Force Speed</a></li>
+				<li><a href="https://torcommunity.com/database/ability/gnkaSa6">Phase Walk</a></li>
+				<li><a href="https://torcommunity.com/database/ability/kMLwa18">Force Barrier</a></li>
+				<li><a href="https://torcommunity.com/database/ability/CdPifNB">Force Cloak</a></li>
+				<li><a href="https://torcommunity.com/database/ability/8KUKNMB">Phantom Stride</a></li>
+
+			</ul>
+		</div><!--
+		--><div class="quarterwidth inline-block topalign">
+			<h4>Sith Warrior</h4>
+			<ul>
+				<li><a href="https://torcommunity.com/database/ability/mq72mzS">Force Charge</a></li>
+				<li><a href="https://torcommunity.com/database/ability/7razXwV">Mad Dash</a></li>
+				<li><a href="https://torcommunity.com/database/ability/LRySaSR">Intercede</a></li>
+				<li><a href="https://torcommunity.com/database/ability/EHoKTe9">Force Camouflage</a></li>
+			</ul>
+		</div><!--
+		--><div class="quarterwidth inline-block topalign">
+			<h4>Imperial Agent</h4>
+			<ul>
+				<li><a href="https://torcommunity.com/database/ability/zPHFjRI">Exfiltrate</a></li>
+				<li><a href="https://torcommunity.com/database/ability/SyK0IcD">Holotraverse</a></li>
+				<li><a href="https://torcommunity.com/database/ability/HxMU3yP">Cloaking Screen</a></li>
+				<li><a href="https://torcommunity.com/database/ability/wboKxm2">Covered Escape</a></li>
+			</ul>
+		</div><!--
+		--><div class="quarterwidth inline-block topalign">
+			<h4>Bounty Hunter</h4>
+			<ul>
+				<li><a href="https://torcommunity.com/database/ability/mnjnny6">Hydraulic Overrides</a></li>
+				<li><a href="https://torcommunity.com/database/ability/egstDfC">Rocket Out</a></li>
+				<li><a href="https://torcommunity.com/database/ability/jz4t8iE">Jet Charge</a></li>
+				<li><a href="https://torcommunity.com/database/ability/WhW9ay9">Translocate</a></li>
+			</ul>
+		</div>
+	</div>
+	<h4>Dealing with one Electro Net</h4>
+	<ol>
+		<li>If you are in a position to do so, CC your attacker(s). Hardstun or mez, doesn't matter, just CC them so they cannot damage you.</li>
+		<li>Move behind cover if possible. If you get netted in the open, this option is out.</li>
+		<li>Use defensives. Unless you are a Sorcerer, your best defensives are not affected by Electro Net. If you are a Sorcerer, this option is out.</li>
+		<li>Use your breaker and escape.</li>
+	</ol>
+	<p>Expect to get focused after being netted. You have to survive for 9 seconds in an environment where you cannot escape, or waste your breaker on it and enjoy the stuns afterwards. Usually there's no good way to deal with a well timed net.</p>
+	<h4>Dealing with multiple Electro Nets</h4>
+	<p>Open your chat window, type /stuck, hit enter and enjoy denying them the killing blow. On a more serious note, you will not survive multiple nets without considerable support from your team.</p>
+	<h3>Physics</h3>
+	<h4>Movement impairing</h4>
+	<h5>Slows <span class="torctip_image torctip_image_ability small_border"><img src="img/effects/slowed.png" class="small_image" alt="Slowed" /></span></h5>
+	<p>These slow the target, reducing their movement speed. Unless the target has some kind of immunity to movement impairing effects (like
+		<a href="https://torcommunity.com/database/ability/mnjnny6">Hydraulic Overrides</a> for Bounty Hunters), slows always work.</p>
+	<h5>Immobilizes (roots) <span class="torctip_image torctip_image_ability small_border"><img src="img/effects/immobilized.png" class="small_image" alt="Immobilized" /></span></h5>
+	<p>These make it impossible for your opponent to move. Operatives have access to a specially evil version of this effect via <a href="https://torcommunity.com/database/ability/hA8sRYA">Crippling Slice</a> that also disables turning. Full resolve prevents being rooted, when used on a whitebarred target, abilities that would root apply a 50% slow instead.</p>
+	<h4>Ballistic</h4>
+	<p>Pushes and pulls belong to this category. Only Darkness Assassin and Powertech (via <a href="https://torcommunity.com/database/ability/EEpni6D">Force Pull</a> and <a href="https://torcommunity.com/database/ability/z156RqA">Grapple</a>) have pulls. Inquisitors have <a href="https://torcommunity.com/database/ability/Gm2p5t4">Overload</a>, which is a frontal-only knockback, Mercenaries and Snipers have <a href="https://torcommunity.com/database/ability/udO06Y7">Jet Boost</a> and <a href="https://torcommunity.com/database/ability/CTKElOF">Cover Pulse</a>, which are 360° knockbacks, and Juggernauts have <a href="https://torcommunity.com/database/ability/p4SCjs5">Force Push</a>, which is single target. Of these Overload is the weakest (with a ballistic momentum of 1.9), followed by Jet Boost (2.2) and Cover Pulse and Force Push (3.0). Operatives can spec into a single target knockback via <a class="torctip_ability"><img class="icon ability small" src="img/utilities/operative/mobile_strategies.png" alt="Mobile Strategies" />Mobile Strategies</a> that also has a ballistic moment of 1.9.</p>
+	<h2 id="toc-resolve">Resolve</h2>
+	<p>In order to counter some of the control there is, the game has a (pretty badly designed) Resolve mechanic. Resolve is displayed around the character portrait on the UI (a.k.a. "the gangbang-meter"). Whenever someone suffers a CC effect that is not movement impairment (that's right: <strong>slows and roots do not build any resolve</strong>), some of the Resolve bar fills up. When a character is on full Resolve, the bar turns white (hence the term "whitebarred") and rapidly starts to delplete. While the Resolve bar is white, hostile incapacitating, ballistic or immobilizing effects will not apply to you and immobilizes slow you by 50% instead. Resolve is an important mechanic and not being familiar with how it works can easily mean a lost objective and eventually a lost match.</p>
+	<div class="fullwidth">
+		<div class="thirdwidth inline-block smallpadding">
+			<figure class="fullwidth">
+				<img src="img/gameplay/resolve_half.png" />
+				<figcaption>Building-up Resolve. No effects.</figcaption>
+			</figure>
+		</div>
+		<div class="thirdwidth inline-block smallpadding">
+			<figure class="fullwidth">
+				<img src="img/gameplay/resolve_full.png" />
+				<figcaption>Full Resolve. Immunity to incapacitation (mez/stun) and immobilization (root).</figcaption>
+			</figure>
+		</div>
+		<div class="thirdwidth inline-block smallpadding">
+			<figure class="fullwidth">
+				<img src="img/gameplay/resolve_expiring.png" />
+				<figcaption>Expiring Resolve. Still in effect until it fully depletes.</figcaption>
+			</figure>
+		</div>
+   	</div>
+	<h4>Resolve in numbers</h4>
+	<p>Let's see how it all looks in detail. If you hover over your Resolve bar with your mouse, it will say 0/1000 in the tooltip, or however much Resolve you currently have. A hardstun (one that does not break when taking damage), by default, generates 200 Resolve when applied for every second of its full duration, so a standard 4 second hardstun is 800 Resolve. A mez (that breaks on damage) is only 100 Resolve per every second of its full duration, but usually they also last longer. A ballistic effect goes for 200 Resolve, except for Juggernauts' Force Push, which only generates Resolve for the knockdown, which, being a 2 second hardstun, makes 400 Resolve.</p>
+	<p>Despite how the tooltip implies, your Resolve can go all the way up to 1500, but the whitebar will trigger as soon as you hit 1000. The immunity kicks in as soon as the bar turns white (so if somebody hardstuns you for 800 Resolve, then mezzes for another 800, and then you get another stun while the mez is in effect, it will not apply), but your Resolve will start to deplete only once all your incapacitating effects have worn off. What this means is that in the above scenario, while you immediately get your 1500 Resolve and a whitebar when the mez applies, your Resolve will not delpleting until that mez actually ends.</p>
+	<p>Resolve expires at a 100/second speed, providing immunity to incapacitating effect and turning any roots into 50% slows until it reaches 0, when the whole process starts over.</p>
+	<p>Your Resolve declines even if you are not whitebarred at a rate of 50 Resolve every 2 seconds, but, like the whitebar, this does not tick while you are incapacitated.</p>
+	<h4>Resolve for overlapping CC</h4>
+		<p>You might notice that if, as a Powertech, you <a href="https://torcommunity.com/database/ability/9ioDkU5">Electro Dart</a> someone and then immediately use <a href="https://torcommunity.com/database/ability/8ttbjr3">Carbonize</a>, the target won't end up having 1300 Resolve, but only 800. If you try to incapactiate somebody while your target already has an incapactitating effect on them, your stun/mezz will only build its normal Resolve minus the Resolve for the leftover part of the previous CC, but 0 at minimum.</p>
+		<p>In the Powertech example, <a href="https://torcommunity.com/database/ability/9ioDkU5">Electro Dart</a> builds 800 Resolve for 4 seconds of hardstun. One GCD (1.5 seconds) later 2.5 seconds of that hardstun remains, which equals to 500 Resolve. <a href="https://torcommunity.com/database/ability/8ttbjr3">Carbonize</a>, being a 2.5 second hardstun, would build 500 Resolve on its own, but from this the leftover Resolve from Electro Dart, which is 500, gets subtracted, leaving 0. If in the same example you sneak in another single-GCD ability between the two stuns, the leftover stun time from Electro Dart would be only 1 second, which means 200 Resolve, so you'll get 300 Resolve for your Carbonize. Note, however, that you cannot take Resolve away this way: if your target gets hardstunned for 4 seconds by someone and 1 second later you apply a 2 second hardstun, it will not reduce the target's Resolve, even though 400-600=-200.</p>
+	<p>Even though you cannot reduce a target's Resolve, you can easily reduce the effectiveness of the mezzes in your team if you attack/stun at the wrong time. Here's for example the Haunted Dreams passive for Assassins:</p>
+	<div class="torctip_tooltip">
+		<div class="torctip_image torctip_image_ability torctip_image_inset">
+			<img src="img/utilities/assassin/haunted_dreams.png" alt="Haunted Dreams" />
+		</div>
+		<span class="torctip_ability">Haunted Dreams</span>
+		<div>
+			<span class="torctip_white">Passive</span>
+		</div>
+		<br />
+		<div class="torctip_white">If your Whirlwind breaks early from damage, the target is stunned for 2 seconds. In addition, Whirlwind activates instantly.</div>
+	</div>
+		<p>The stun from the broken <a href="https://torcommunity.com/database/ability/4cvksN0">Whirlwind</a> counts as a new effect, building its own Resolve (400). What happens if Whirlwind gets broken after 7 seconds? The remaining Resolve for Whirlwind is 100, meaning the extra 1 second of incapacitation you get from Haunted Dreams will cost you 300 Resolve. If the same break happens at 2 seconds, 6 seconds of Whirlwind go to waste (600 Resolve), so not only you will lose out on 4 seconds of CC, you also won't build a single point of Resolve.</p>
+	<h3>Using your CC breaker</h3>
+	<p>Every class has access to a "breaker" (<a href="https://torcommunity.com/database/ability/A4ODDR4">Unbreakable Will</a> for Inquisitors, <a href="https://torcommunity.com/database/ability/BmmB1W1">Unleash</a> for Warriors, <a href="https://torcommunity.com/database/ability/rj5cWtB">Escape</a> for Agents and <a href="https://torcommunity.com/database/ability/bGCmUb6">Determination</a> for Bounty Hunters), an ability that "Purges all incapacitating and movement-impairing effects", i.e. it removes any CC you have on you. Note, however, that it does not provide immunity to them; you can be CC'ed immediately after you broke. The baseline cooldown on every breaker is 2 minutes, which can be reduced by some utility choices. Even then you'll find that there's way more CC in the game than you can break, so you have to be smart about when to use your breaker.</p>
+	<p><strong>In general, do not break the first CC you get.</strong> I know, being CC'ed is annoying, but you'll get CC'ed anyway. Save your breaker for situations where you'll actually need it, like your node is being capped or you're going to die unless you immediately break. Also take a moment to consider what you're going to do after you break, if you choose to do it. If you're on very low HP and you're getting focused hard, it might not matter if you break that stun; you'll die anyway.</p>
+	<p><strong>Try to use the breaker when you're on full Resolve.</strong> Because full Resolve provides CC immunity, at least you won't be stunned right after you use your breaker, making it a complete waste.</p>
+	<p><strong>Do not use breaker on anything but stuns and mezzes.</strong> Very few exceptions apply to this rule. The "Operative rooting you is annoying" is not one of them. Clearing slows using your stunbreaker is outright sacrilegious.</p>
+	<h1 id="toc-group-play">Group play</h1>
+	<h3 id="toc-class-utility">Class utility</h3>
+	<p>I could also have called this section Helping Your Allies. PvP is not a solo job; you have a team, and playing in a way that only benefits you is not only selfish, but will also limit unleashing your class' full potential. Let me put it more clearly: if you only ever care about yourself and blindly tunnel your target in PvP, you are bad.</p>
+	<h4>Class buffs</h4>
+	<p>Class buffs are abilities that provide long-term (1 hour) buffs to all members of your group. Every base class has access to a class buff. You always get the buff for your own class at level 1, and this also applies the buffs for other classes for which you have completed Chapter 2 of their respective class stories. If you do not have all class buffs unlocked, ask your teammates in chat to provide them for you.</p>
+	<div class="border"><table>
+		<thead>
+			<tr>
+				<th>Ability</th>
+				<th>Description</th>
+				<th>Class</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/9EnGcrC">Mark of Power</a></td>
+				<td>Increases the target's Mastery by 5% and internal and elemental damage reduction by 10% for 60 minutes.</td>
+				<td><img src="img/class_icons/sith-inquisitor.png" alt="Sith Inquisitor" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/kNMbVxB">Unnatural Might</a></td>
+				<td>Increases the target's melee, ranged, Force and tech bonus damage and healing by 5% for 60 minutes.</td>
+				<td><img src="img/class_icons/sith-warrior.png" alt="Sith Warrior" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/bRzN4LK">Coordination</a></td>
+				<td>Increases a friendly target's critical hit chance by 5% for 60 minutes.</td>
+				<td><img src="img/class_icons/imperial-agent.png" alt="Imperial Agent" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/Hnlx567">Hunter's Boon</a></td>
+				<td>Increases the target's Endurance by 5% for 60 minutes.</td>
+				<td><img src="img/class_icons/bounty-hunter.png" alt="Bounty Hunter" /></td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h4>Raid buffs</h4>
+	<p>Raid buffs are abilities that provide short-term (10 second) buffs to all members of your group. Originally only Marauders had access to raid buffs, but this has been expanded since. Because raid buffs last only a short while and have a 5 minute lockout (except <a href="https://torcommunity.com/database/ability/yOL0fc2">Predation</a>), use them only in the heat of a fight and not when running out of the spawn. Raid buffs (once again except <a href="https://torcommunity.com/database/ability/yOL0fc2">Predation</a>) are disabled in arenas.</p>
+	<div class="border"><table>
+		<thead>
+			<tr>
+				<th>Ability</th>
+				<th>Description</th>
+				<th>Class</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/2M0GPA4">Unlimited Power</a></td>
+				<td>Increases mastery, endurance, and presence for you and your Operation group members within 40 meters by 10%. Lasts 10 seconds.</td>
+				<td><img src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yOL0fc2">Predation</a></td>
+				<td>Requires and converts 30 stacks of Fury to issue Predation to you and your Operation group members within 40 meters, increasing movement speed by 50% and melee and ranged defense by 10%. Lasts 10 seconds.</td>
+				<td><img src="img/class_icons/sith-marauder.png" alt="Sith Marauder" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/Nye8UfG">Bloodthirst</a></td>
+				<td>Requires and converts 30 stacks of Fury to issue Bloodthirst to you and your Operation group members within 40 meters, increasing all damage and healing done by 10% for 10 seconds.</td>
+				<td><img src="img/class_icons/sith-marauder.png" alt="Sith Marauder" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/E2NRmeA">Tactical Superiority</a></td>
+				<td>Executes your Tactical Advantage to grant Tactical Superiority to you and your Operation group members within 40 meters, increasing critical chance by 10% for 10 seconds. Does not break stealth.</td>
+				<td><img src="img/class_icons/operative.png" alt="Operative" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/t2CknfA">Supercharged Celerity</a></td>
+				<td>Requires and converts 10 stacks of Supercharge to issue Supercharged Celerity to you and your Operation group members within 40 meters, increasing alacrity by 10%. Lasts 10 seconds.</td>
+				<td><img src="img/class_icons/mercenary.png" alt="Mercenary" /></td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h4>Peeling tools</h4>
+	<p>Peeling for your teammates means helping them survive by getting enemies off their backs. Basic hardstun and tank skills (Guard and Taunts) not included. Here are the most imporant ones:</p>
+	<div class="border"><table>
+		<thead>
+			<tr>
+				<th>Ability</th>
+				<th>Description</th>
+				<th>Class</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/Gm2p5t4">Overload</a></td>
+				<td>Deals energy damage and knocks back up to 8 enemies within a 15-meter cone in front of you.</td>
+				<td class="center"><img src="img/class_icons/sith-inquisitor.png" alt="Sith Inquisitor" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/qNgyPDP">Extrication</a></td>
+				<td>Lowers the target's threat by a moderate amount and, if the target is a group member, pulls the target to your location.</td>
+				<td class="center"><img src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/EEpni6D">Force Pull</a></td>
+				<td>Uses the Force to draw the target in, instantly pulling it to your location and generating a high amount of threat. Does not work against targets in cover.</td>
+				<td class="center"><img class="icon small" src="img/disciplines/assassin/darkness.png" alt="Darkness Assassin" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/p4SCjs5">Force Push</a></td>
+				<td>Deals kinetic damage, knocks the target back several meters, and knocks the target down for 2 seconds. Force Push immediately finishes the cooldown of <a href="https://torcommunity.com/database/ability/mq72mzS">Force Charge</a>.</td>
+				<td class="center"><img src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/1WHhjhF">Intimidating Roar</a></td>
+				<td>Paralyzes up to 8 nearby enemies in fear, preventing all action for up to 6 seconds. Damage ends the effect prematurely.</td>
+				<td class="center"><img src="img/class_icons/sith-warrior.png" alt="Sith Warrior" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yiay07v">Obfuscate</a></td>
+				<td>Obscures the target's vision, reducing its melee and ranged accuracy by 90% for 6 seconds. Cannot be used on Operation bosses. This ability does not respect the global cooldown.</td>
+				<td class="center"><img src="img/class_icons/sith-marauder.png" alt="Sith Marauder" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/kQNxeB3">Flash Bang</a></td>
+				<td>Detonates a flash bang that blinds the target for 8 seconds. Damage causes this effect to end prematurely.</td>
+				<td class="center"><img src="img/class_icons/imperial-agent.png" alt="Imperial Agent" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/CTKElOF">Cover Pulse</a></td>
+				<td>Detonates an emergency charge that knocks all nearby targets back several meters and immobilizes them for 5 seconds. Damage dealt after 2 seconds ends the effect prematurely. Only usable in cover.</td>
+				<td class="center"><img src="img/class_icons/sniper.png" alt="Sniper" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yf0ZIQH">Diversion</a></td>
+				<td>Reduces the accuracy by 45% and exposes from cover up to 8 enemies within 8 meters for 8 seconds. Cannot be used on Operation bosses.</td>
+				<td class="center"><img src="img/class_icons/sniper.png" alt="Sniper" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/fuYy6XD">Ballistic Shield</a></td>
+				<td>Deploys a ballistic shield that spans 10 meters around you, reducing the damage taken by all allies that remain inside by 20%. Lasts 20 seconds.</td>
+				<td class="center"><img src="img/class_icons/sniper.png" alt="Sniper" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/udO06Y7">Jet Boost</a></td>
+				<td>Blasts 8 nearby enemies back and away. Targets hit by this take elemental damage and have their movement slowed by 50% for 4 seconds.</td>
+				<td class="center"><img src="img/class_icons/mercenary.png" alt="Mercenary" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/8ttbjr3">Carbonize</a></td>
+				<td>Encases up to 8 enemies within 8 meters in carbonite, dealing internal damage and stunning them for 2.5 seconds.</td>
+				<td class="center"><img src="img/class_icons/powertech.png" alt="Powertech" /></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/z156RqA">Grapple</a></td>
+				<td>Fires a grapple line that pulls the target to the Bounty Hunter and generates a high amount of threat. Cannot be used on targets in cover.</td>
+				<td class="center"><img src="img/class_icons/powertech.png" alt="Powertech" /></td>
+			</tr>
+		</tbody>
+	</table></div>
+
+		<h3 id="toc-protection">Protection</h3>
+
+			<p>Any class that has a Tank specialization (Assassin, Juggernaut and Powertech) has access to the most important tanking abilities, namely <a href="https://torcommunity.com/database/ability/ZyErGpO">Guard</a> and <a href="https://torcommunity.com/database/ability/fybuEfP">Taunt</a>. Using these abilities correctly will get the most out of your class, even if you're playing damage dealers. If for nothing else, think of how easy it is to farm medals with getting Protection numbers; and you do like medals, right?</p>
+
+			<h4>Guard</h4>
+
+				<p>With the overabundance of <a href="https://torcommunity.com/database/ability/ZyErGpO">Guard</a> it is sad to see how many people are using it wrong. When you guard a teammate, they will take 5% less damage for the time of being guarded and 50% of the damage taken by the guarded teammate will get redirected to you, as long as you stay within 15 meters of the target. Guarded targets get a buff <img class="icon effect small" src="img/effects/guard.png" alt="Guard" />, while if you're out of range, they also get another: <img class="icon effect small" src="img/effects/guard_out_of_range.png" alt="Guard: Out of Range" />. If your guarded target has the blue icon, it means your guard is not redirecting damage. (Damage reduction and the <a href="https://torcommunity.com/database/ability/pSKya9L">Rule of Two</a> passive for Juggernauts still work.) Since guard doesn't fall off if the guarder is out of range, the guarded cannot be given another Guard by anyone unless they click the buff off the guarder themselves removes it.</p>
+
+				<p>Putting a guard on someone and leaving is… <a href="https://torcommunity.com/database/achievement/yTMpCbH">That's Just Wrong!</a> Your guarded target probably expects your help (unless they know better) if you bothered to give them guard. Do not guard anyone unless you are actually willing to be close to them to share damage.</p>
+
+				<p>Since Guard only does something if your target is attacked, it goes without saying (if only it would!) that if you're guarding a target that's not being attacked, and not guarding one that is, especially if you are playing Tank, doubly especially if you're playing a Tank in with tank gear, you're doing it awfully wrong. You can just select an unguarded target and put Guard on them; it doesn't even require you to remove Guard from the previous target, the game does it automatically for you. As a Tank, the single most important thing you can do in any game is proper guarding. You have to learn it. You need to switch your Guard to the targets being focused, just like healers have to switch their target when healing. Tank is a support role, just like healer; play it as such.</p>
+
+			<h4>Taunt</h4>
+
+				<p>If you have access to Guard, you also have access to <a href="https://torcommunity.com/database/ability/fybuEfP">Taunt</a>. Like Guard, Taunt works differently in PvP than it does in PvE. Specifically, a taunted target does 30% less damage for the duration of the taunt debuff on anyone <em>but the taunter</em>. Taunts do not cost a GCD, do not cost resources, do not cost anything. Use them.</p>
+
+				<p>With that said:</p>
+				<ul>
+					<li>Do not taunt a target that's attacking you. It's pointless and will not reduce their damage.</li>
+					<li>Do not taunt healers. Healers don't do damage, and even if they do, it's minimal.</li>
+					<li>Try to taunt the person in the enemy team you expect to have highest damage.</li>
+				</ul>
+
+		<h3 id="toc-cleansing">Cleansing</h3>
+
+			<p>Cleansing used to be a useful skill for PvP before patch 3.0, as it could remove damage-over-time effects, making it an effective part of a healer's arsenal. Sadly that's no longer the case, and cleanses are, few cases aside, useless. Cleansing only removes 2 effects, and you cannot control which two. While most stuns can be cleansed, often your efforts will just remove a slow or some other useless debuff.</p>
+
+			<p>Force healers (Sorcerer) can only remove Force, mental and physical effects, while tech healers (Operative and Mercenary) can cleanse tech, mental and physical ones. It would be nice if mezzes were universally cleansable, but they aren't always are. (<a href="https://torcommunity.com/database/ability/4cvksN0">Whirlwind</a> is a Force effect, <a href="https://torcommunity.com/database/ability/kQNxeB3">Flash Bang</a> is tech, while <a href="https://torcommunity.com/database/ability/cKMPcp7">Concussion Missile</a> is mental. It's a mess.)</p>
+
+			<p>Cleansing abilities:</p>
+			<div class="border"><table>
+				<thead>
+					<tr>
+						<th rowspan="2">Ability</th>
+						<th colspan="2">Cleanses</th>
+					</tr>
+					<tr>
+						<th>by default</th>
+						<th>if healer</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="https://torcommunity.com/database/ability/901LdvB">Expunge</a></td>
+						<td>mental, Force</td>
+						<td>physical</td>
+					</tr>
+					<tr>
+						<td><a href="https://torcommunity.com/database/ability/VyIIowN">Toxic Scan</a></td>
+						<td>physical, tech</td>
+						<td>mental</td>
+					</tr>
+					<tr>
+						<td><a href="https://torcommunity.com/database/ability/dfc4AU3">Cure</a></td>
+						<td>physical, tech</td>
+						<td>mental</td>
+					</tr>
+				</tbody>
+			</table></div>
+	<h4>Purging</h4>
+	<p>Purging is a stronger version of cleansing and is only offered by a few ablities/utilities. Purging clears every removable effect from the player, even those that are not cleansable. Purging can be used to remove most player-applied effects, with the notable exception of <a href="https://torcommunity.com/database/ability/ycQmPDP">Electro Net</a>, <a href="https://torcommunity.com/database/ability/4Huf6y5">Thermal Detonator</a> and <a href="https://torcommunity.com/database/ability/j8zZb2T">Explosive Dart</a>. Purges only come in the form of self-purges, you cannot use them on others. Abilities that purge:</p>
+	<div class="border"><table>
+		<thead>
+			<tr>
+				<th>Ability</th>
+				<th>Utility Requirement</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/kMLwa18">Force Barrier</a></td>
+				<td>None</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/u6lcQ63">Force Shroud</a></td>
+				<td>None</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/CdPifNB">Force Cloak</a></td>
+				<td><a class="torctip_ability"><img class="icon ability small" src="img/utilities/assassin/shroud_of_madness.png" alt="Shroud of Madness" />Shroud of Madness</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/AAEcmC7">Endure Pain</a></td>
+				<td><a class="torctip_ability"><img class="icon ability small" src="img/utilities/juggernaut/consuming_rage.png" alt="Consuming Rage" />Consuming Rage</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/EHoKTe9">Force Camouflage</a></td>
+				<td><a class="torctip_ability"><img class="icon ability small" src="img/utilities/marauder/expunging_camouflage.png" alt="Expunging Camouflage" />Expunging Camouflage</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/19ABSP4">Evasion (Operative only)</a></td>
+				<td>None, but for Operatives only</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/HxMU3yP">Cloaking Screen</a></td>
+				<td><a class="torctip_ability"><img class="icon ability small" src="img/utilities/operative/advanced_cloaking.png" alt="Advanced Cloaking" />Advanced Cloaking</a></td>
+			</tr>
+		</tbody>
+	</table></div>
+	<h2 id="toc-know-your-enemy">Knowing your enemy</h2>
+	<p>Knowing your enemy in PvP is just as important as knowing your own class. Good PvP'ers will have a generally good understanding of all disciplines and classes in the game, at least to the level of knowing their most important abilities and how they work. In the following table I will list the most important things to look out for. This is, of course, not an exhaustive list of every single defensive/damage reduction ability in the game, just the most important ones. Please note that hindering (Electro Net/Gore) is not listed in the Counterplay column.</p>
+	<div class="para border">
+	<div class="expansible-container">
+	<div class="expansible-content"><table>
+		<thead>
+			<tr>
+				<th>Ability</th>
+				<th>Cooldown</th>
+				<th>Class</th>
+				<th>Description</th>
+				<th>Counterplay</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="5"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-inquisitor.png" />Sith Inquisitor</h4></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/HOakDk4">Force Speed</a></td>
+				<td>20 seconds</td>
+				<td><img class="class-icon-small" src="img/class_icons/sith-inquisitor.png" alt="Sith Inquisitor"/></td>
+				<td>Increases movement speed by 150% for 2 seconds. Does not break Stealth.</td>
+				<td>Stun or use gap closer afterwards.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td><a href="https://torcommunity.com/database/ability/JbbT550">Emersion</a></td>
+							<td><img class="class-icon-small" src="img/class_icons/sith-inquisitor.png" alt="Sith Inquisitor"/></td>
+							<td>Force Speed grants Emersion, removing all movement-impairing effects and granting immunity to them for the duration.</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="torctip_ability"><img src="img/utilities/assassin/phasing_phantasm.png" class="icon ability small" alt="Phasing Phantasm" />Phasing Phantasm</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+							</td>
+							<td>Phantom Stride can be used while immobilized and purges movement-impairing effects when used. Additionally, Force Speed grants Phasing Phantasm, causing you to absorb 60% of all incoming damage for the duration of Force Speed.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/gnkaSa6">Phase Walk</a></td>
+				<td>60 seconds</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/>
+				</td>
+				<td>Activating this ability marks your current location for 10 minutes. When this ability is activated again, if you are within 60 meters of the marked location, you instantly return to the marked location. Phase Walk goes on cooldown for 60 seconds when used to return to the marked location.</td>
+				<td>Phase Walk works while stunned, it has no effective counter other than hindering effects or <a href="https://torcommunity.com/database/ability/p4SCjs5">Force Push</a>. Try to stay near the marked location to make it less effective, but a good Sorcerer will do their best kite you away anyway.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/kMLwa18">Force Barrier</a></td>
+				<td>3 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-sorcerer.png" alt="Sith Sorcerer"/>
+				</td>
+				<td>Projects a Force Barrier around you, granting immunity to all control, damage, and negative effects while channeled. This ability does not respect the global cooldown and can be used while controlled. While you are protected by Force Barrier charges will build up and grant Enduring Bastion, a shield that absorbs an amount of damage based off the charges that are present when Force Barrier ended. Enduring Bastion also grants immunity to interrupts.</td>
+				<td>No counter besides hindering. Switch to another target. Stun while the barrier from Enduring Bastion is up.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/u6lcQ63">Force Shroud</a></td>
+				<td>60 seconds</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+				</td>
+				<td>Purges all hostile removable effects and increases your chance to resist Force and tech attacks by 200% for 3 seconds. Does not break Stealth.</td>
+				<td>Use M/R (white damage) attacks.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/RpyQls8">Deflection</a></td>
+				<td>2 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+				</td>
+				<td>Increases your ranged and melee defenses by 50% for 12 seconds. Requires a melee weapon.</td>
+				<td>Use F/T (yellow damage) attacks.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/assassin/dark_stability.png" alt="Dark Stability" />
+									</div>Dark Stability
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+							</td>
+							<td>Activating Deflection grants 6 seconds of immunity to stun, sleep, lift, and incapacitating effects.</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/assassin/retaliatory_grip.png" alt="Retaliatory Grip" />
+									</div>Retaliatory Grip
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-assassin.png" alt="Sith Assassin"/>
+							</td>
+							<td>Deflection grants Retaliatory Grip, reflecting 50% (or 100% for the Darkness discipline) of all direct single target tech and Force damage back at the attacker. Retaliatory Grip lasts for 12 seconds and does not absorb incoming damage.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/sith-warrior.png" />Sith Warrior</h4></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/RX0MdF2">Saber Ward</a></td>
+				<td>3 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-warrior.png" alt="Sith Warrior"/>
+				</td>
+				<td>Raises a lightsaber ward, increasing melee and ranged defenses by 50% and absorbing 25% of the damage taken from Force and tech attacks. Lasts 12 seconds.</td>
+				<td>Use F/T (yellow damage) attacks or switch targets.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/marauder/blood_ward.png" alt="Blood Ward" />
+									</div>Blood Ward
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+							</td>
+							<td>Activating Saber Ward grants immunity to stun, sleep, lift, and incapacitating effects for 6 seconds, and getting attacked while Saber Ward is active heals you for 3% of your maximum health. This healing effect cannot occur more than once every second.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/7razXwV">Mad Dash</a></td>
+				<td>45 seconds</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-warrior.png" alt="Sith Warrior"/>
+				</td>
+				<td>Madly dash forward 20 meters, dealing weapon damage to enemies in your path and increasing your defense chance by 100% while dashing. Cannot be used while immobilized or hindered.</td>
+				<td>No couter besides what's in the description. Since it absorbs any attack, try to avoid attacking into it.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/a1PSym0">Saber Reflect</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+				</td>
+				<td>Reflects all direct single target ranged, Force, and tech attacks back to the attacker for 3 seconds. The damage done by each reflect is capped, and the cap rises with each new rank of the ability.</td>
+				<td>Use Melee attacks, DoTs or AoE.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/AAEcmC7">Endure Pain</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+				</td>
+				<td>Temporarily increases your maximum health by 30% for 10 seconds. When the effect ends, the health is lost.</td>
+				<td>Ignore the extra health and proceed as normal.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/juggernaut/consuming_rage.png" alt="Consuming Rage" />
+									</div>Consuming Rage
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+							</td>
+							<td>Endure Pain removes all cleansable effects when activated.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/MIEvDJ8">Enraged Defense</a></td>
+				<td>2 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+				</td>
+				<td>Empowers you with 12 charges of Enraged Defense, lasting up to 15 seconds. Whenever you take damage a charge of Enraged Defense is consumed to heal you. This ability can be used while stunned or otherwise controlled but cannot be used while above 70% health.</td>
+				<td>Preferably mez and kite as to not heal them up. If that's impossible just ignore and burn through it.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/juggernaut/through_power.png" alt="Through Power" />
+									</div>Through Power
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-juggernaut.png" alt="Sith Juggernaut"/>
+							</td>
+							<td>Enraged Defense increases your movement speed by 50% and grants immunity to movement-impairing effects while active.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/y0p3MJV">Cloak of Pain</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+				</td>
+				<td>Reduces all damage taken by 20% and deals energy damage to attackers. This effect cannot occur more than once every second. Lasts 6 seconds. Cloak of Pain refreshes to its full duration when attacked, but this effect cannot last more than 30 seconds in total.</td>
+				<td>Wait it out if you can or just ignore it if you can't. Note that any damage, even DoT ticks refresh the timer.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yiay07v">Obfuscate</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+				</td>
+				<td>Obscures the target's vision, reducing its melee and ranged accuracy by 90% for 6 seconds. Cannot be used on Operation bosses. This ability does not respect the global cooldown.</td>
+				<td>If you get Obfuscated, your white damage abilities will most likely miss and yellow damage ones will only do 25% of their normal damage. Try to root/stun or otherwise wait it out.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/tKMCVY2">Ruthless Aggressor</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+							</td>
+							<td><a href="https://torcommunity.com/database/ability/BN1561B">Vicious Throw</a> refunds 2 rage when used on a target affected by your <a href="https://torcommunity.com/database/ability/yiay07v">Obfuscate</a> and can be used on any target affected by your <a href="https://torcommunity.com/database/ability/yiay07v">Obfuscate</a>, regardless of remaining health. Additionally, activating <a href="https://torcommunity.com/database/ability/yiay07v">Obfuscate</a> grants you <a href="https://torcommunity.com/database/ability/tKMCVY2">Ruthless Aggressor</a>, reducing the damage you take from Force and tech attacks by 75% for 6 seconds.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/gkDPyJC">Undying Rage</a></td>
+				<td>3 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/>
+				</td>
+				<td>Reduces the damage you take by 99% for 4 seconds.</td>
+				<td>Stun or kite. Don't try to do damage, it goes to waste.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/4SCyBp9">Gravity Vortex</a></td>
+				<td>30 seconds</td>
+				<td><img class="class-icon-small" src="img/class_icons/sith-marauder.png" alt="Sith Marauder"/></td>
+				<td>Force Crush triggers Gravity Vortex, granting immunity to interrupts and all controlling effects for 6 seconds. This effect cannot occur more than once every 30 seconds. Additionally, Obliterate and Force Crush each consume 1 less rage.</td>
+				<td>Use defensives or try to create some distance. You cannot stun/push a Marauder with Gravity Vortex up. Fury only.</td>
+			</tr>
+			<tr>
+				<td colspan="5"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/imperial-agent.png" />Imperial Agent</h4></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/19ABSP4">Evasion</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/imperial-agent.png" alt="Imperial Agent"/>
+				</td>
+				<td>Increases your chance to dodge melee and ranged attacks by 200% for 3 seconds. Does not break Stealth.</td>
+				<td>Use F/T (yellow damage) attacks. If they also have Blow for Blow, use DoTs or AoE. Single target F/T attacks do not get absorbed, so if they're on low HP and you can eat some reflected damage, it might be worth pushing it.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/operative/blow_for_blow.png" alt="Blow for Blow" />
+									</div>Blow for Blow
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/operative.png" alt="Operative"/>
+							</td>
+							<td>Activating Evasion grants Blow for Blow, returning 150% of direct single target tech and Force damage taken back to the attacker while Evasion is active.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/zPHFjRI">Exfiltrate</a></td>
+				<td>None</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/operative.png" alt="Operative"/>
+				</td>
+				<td>Roll forward 12 meters. Activating Exfiltrate a second time within 10 seconds allows you to roll again, but puts the ability on cooldown for 10 seconds. While rolling, your chance to dodge melee and ranged attacks is increased by 30%. Does not break stealth. Cannot be used while immobilized or hindered.</td>
+				<td>Root as much as possible, as it prevents Exfiltrate from being used. Slows also reduce the roll distance. Do not attack. Be careful as the immunity effect lasts a bit longer than the animation.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/bcneJJF">Shadow Operative Elite</a>
+							</td>
+							<td></td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/operative.png" alt="Operative"/>
+							</td>
+							<td>Increases your effective stealth level by 2. In addition, when you activate Exfiltrate, you dodge or resist all incoming attacks for 1.5 seconds.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/xfmzc6V">Entrench</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sniper.png" alt="Sniper"/>
+				</td>
+				<td>Entrenches you into cover, becoming immune to all controlling effects. Only grants protection while in cover. Lasts 20 seconds.</td>
+				<td>Use Diversion if you're a Sniper yourself, it cancels Cover. Otherwise try to LoS and survive. No real conterplay aside from killing them.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/VpUoyJU">Seek Cover</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sniper.png" alt="Sniper"/>
+							</td>
+							<td>When Entrench ends or you leave cover while Entrench is active, you gain Seek Cover, which increases your movement speed by 50% and grants immunity to movement impairing effects. Lasts 6 seconds.</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/zS8pUAA">Siege Bunker</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/sniper.png" alt="Sniper"/>
+							</td>
+							<td>Reduces all area effect damage taken by 60% while Entrench is active.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yf0ZIQH">Diversion</a></td>
+				<td>1 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/sniper.png" alt="Sniper"/>
+				</td>
+				<td>Reduces the accuracy by 45% and exposes from cover up to 8 enemies within 8 meters for 8 seconds. Cannot be used on Operation bosses.</td>
+				<td>Move out of the area. Mad Dash/Exfiltrate/Covered Escape can fully negate Diversion if used preemptively.</td>
+			</tr>
+			<tr>
+				<td colspan="5"><h4 class="internal-header"><img class="class-icon" src="img/class_icons/bounty-hunter.png" />Bounty Hunter</h4></td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/mnjnny6">Hydraulic Overrides</a></td>
+				<td>45 seconds</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/bounty-hunter.png" alt="Bounty Hunter"/>
+				</td>
+				<td>Grants 6 seconds of immunity from movement-impairing effects, knockdowns and physics and increases movement speed by 30%.</td>
+				<td>Stuns still work. And you can chase them.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/yd8yLmH">Energy Shield</a></td>
+				<td>2 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/bounty-hunter.png" alt="Bounty Hunter"/>
+				</td>
+				<td>Increases damage reduction by 25% for 12 seconds.</td>
+				<td>With the maximum healing provided by <a class="torctip_ability"><div class="torctip_image torctip_image_ability small_border"><img class="small_image" src="img/utilities/mercenary/trauma_regulators.png" alt="Trauma Regulators" /></div>Trauma Regulators</a> decreased to 40%, just burst through it.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/mercenary/power_shield.png" alt="Power Shield" />
+									</div>Power Shield
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>Energy Shield now further decreases ability activation pushback by 30%, increases all healing received by 20% and makes you immune to interrupts.</td>
+						</tr>
+						<tr>
+							<td><a href="https://torcommunity.com/database/ability/S3pRPe1">Energy Rebounder</a></td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>When you take damage, the active cooldown of Energy Shield is reduced by 3 seconds. This effect cannot occur more than once every 1.5 seconds. In addition, when taking damage, you have a 20% chance to emit an Energy Redoubt, which absorbs a low amount of damage and lasts 6 seconds. This effect cannot occur more than once every 10 seconds.</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/mercenary/trauma_regulators.png" alt="Trauma Regulators" />
+									</div>Trauma Regulators
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>While Energy Shield is active, you generate a stack of Trauma Regulators each time you receive direct damage. Stacks up to 10 times. When Energy Shield expires, each stack of Trauma Regulators instantly heals you for 4% of your maximum health.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/pNlLrUC">Kolto Overload</a></td>
+				<td>1 second</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/bounty-hunter.png" alt="Bounty Hunter"/>
+				</td>
+				<td>Activating this ability applies a Health Monitor that lasts up to 60 seconds, which triggers a Kolto Overload when your health is reduced to 35% or less. If your health is already 35% or less, Kolto Overload triggers immediately. Once triggered, Kolto Overload goes on cooldown for 3 minutes and rapidly heals you up to 35% of your max health for 8 seconds but will not exceed 35% of your max health.</td>
+				<td>Same as Energy Shield, CC or try bursting through.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a class="torctip_ability">
+									<div class="torctip_image torctip_image_ability small_border">
+										<img class="small_image" src="img/utilities/mercenary/kolto_surge.png" alt="Kolto Surge" />
+									</div>Kolto Surge
+								</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>Kolto Overload heals you twice as fast and heals you up to 60% of your maximum health. Additionally, the duration of Kolto Overload is increased by 2 seconds.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/KDtYFFF">Chaff Flare</a></td>
+				<td>45 seconds</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+				</td>
+				<td>Reduces threat towards all current enemies.</td>
+				<td>If the Mercenary is Innovative Ordnance, it gives a flat 35% chance to avoid any attack. You can probably ignore it, but you might not want to risk your heavy hitters during those 6 seconds. If they're Arsenal, either switch to M/R (white damage) attacks or quickly burn through the absorb stacks. Do not waste your high damage F/T attacks on it.</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="details-row">
+					<div class="border"><table class="headerless">
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/08DB2QA">Degauss</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>Activating Chaff Flare increases your defense chance by 35% for 6 seconds.</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://torcommunity.com/database/ability/pkxLLj3">Decoy</a>
+							</td>
+							<td>
+								<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+							</td>
+							<td>Chaff Flare grants 2 charges of Decoy. Each charge of Decoy intercepts and absorbs an incoming Force or tech attack. Each time you absorb a Force or tech attack in this manner, Decoy loses 1 charge. Lasts up to 10 seconds.</td>
+						</tr>
+					</table></div>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/ycQmPDP">Electro Net</a></td>
+				<td>1.5 minute</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+				</td>
+				<td>Fires an electro net that ensnares the target, reducing its movement speed by 50% and dealing energy damage over 9 seconds. While affected, a target that moves takes 20% more damage from electro net, and this effect can stack up to 10 times on enemy players or 5 times on any other target. Additionally, the electro net hinders the target, preventing the use of high mobility actions and escapes such as charges, vanishes, and speed boosts. Lasts 9 seconds.</td>
+				<td>Stun, hide or defensives.</td>
+			</tr>
+			<tr>
+				<td><a href="https://torcommunity.com/database/ability/K7IosR2">Responsive Safeguards</a></td>
+				<td>2 minutes</td>
+				<td>
+					<img class="class-icon-small" src="img/class_icons/mercenary.png" alt="Mercenary"/>
+				</td>
+				<td>Activates an advanced response system that absorbs all incoming direct single target damage for the next 6 seconds, reflecting 50% of the absorbed damage back at the attacker and healing you for 5% of your maximum health each time an attack is absorbed. Can be used while stunned.</td>
+				<td>Stun, hide or use AoE or DoTs, as those aren't affected.</td>
+			</tr>
+		</tbody>
+	</table></div>
+	<a class="expansible-expander">Show full table</a>
+	</div></div>
+
+<h1 id="toc-interface-controls">User interface settings and controls</h1>
+	<p>Optimal user interface settings and controls are, of course, subject to personal taste and there's no "correct" way of setting them up. There are, however, various things that are simply recommended for optimal performance. Let's begin with examining settings.</p>
+	<h2>Preferences</h2>
+		<h3>Controls</h3>
+			<p>Under General, make sure Enable Focus Target and Use Quickslots On Key Press are <strong>on</strong>. Deselect Target upon Clicking on Terrain is optional, but Auto Target Closest Enemy, should definitely be <strong>off</strong>.</p>
+			<p>Under Camera, set the maximum camera distance to the maximum possible. This will not only allow you to see more of what's happening around you in the game, but it's also required for "peeking" into the enemy spawns in certain warzones.</p>
+			<p>Under Combat, set the Ability Action Queue Window to your personal preference. In case you're wondering, this allows you to activate abilities before they can be used (for example because of the GCD), and they will be queued to execute when possible. Quick Ground Target Activation should definitely be <strong>on</strong>, and I would also advise keeping Sticky Ground Target Reticule <strong>enabled</strong>. (If for nothing else, it comes handy when passing the Huttball.)</p>
+		<h3>FlyText</h3>
+			<p>FlyTexts are the damage numbers and various combat actions (like "Parry", "Reflected", etc.) that pop up from characters. I recommend keeping all FlyText <strong>enabled</strong>.</p>
+		<h3>Combat Logging</h3>
+			<p>It's good to have all of these <strong>enabled</strong> for PvP. Show Victory Messages in Chat will tell you if you managed to kill the pesky stealther or they got away; Defeat Messages will tell you who you need to have revenge on after respawning. Enable combat logging to file will enable you to review combat events later and is also recommended to keep on.</p>
+		<h3>User Interface</h3>
+			<p>If you scroll down to Cooldown Settings, have all three of these options <strong>enabled</strong>. Cooldown texts will tell you exactly when an ability comes off cooldown and they're important for proper timing.</p>
+			<p>In the Buffs and Debuffs section have Highlight Triggered Abilities <strong>checked.</strong></p>
+		<h3>Nameplates</h3>
+			<p>At the very minimum have Nameplate on Friendly Players, Nameplate on Enemy Players and Always Show Class Symbol <strong>enabled</strong>. The rest are really up to your preference.</p>
+	<h2>Camera and movement</h2>
+		<p>It probably shouldn't be me that's giving advice about this as I'm very bad at managing this myself, but here we go, let's see some common advice for getting this correctly. Holding either main mouse button allows you to rotate the camera, while holding both at the same time also moves your character forward. You should never, ever use your keyboard to turn; get used to doing this with your mouse. (Keyboard turning is simply not fast enough for PvP.) Personally I do not recommend using both mouse buttons to move, as even if you keybind everything, there will still be plenty of things to click. Instead, if you do not like the idea of having your movement key continuously held down, use the autorun feature.</p>
+		<p>Beckpedalling, or moving backwards ("S" key by default) is a controversial topic in itself. As backpedalling is slower than forward/side movement, it is generally not recommended to do. It is my personal opinion, however, that it makes camera handling easier at times. Whether you want to be a beckpedaller is up to you and I'm sure this won't be the biggest issue you'll run into while PvP'ing.</p>
+		<p>You should try to get used to having your camera controlled manually for most of the time, and to keep it on the objectives. It makes you look stupid when you're dueling someone and a second person is planting the bomb behind your back.</p>
+	<h2>Keybinds</h2>
+		<p>This should go without saying, but still, here it is: keybind everything you can. It's no excuse that one of the best players healers in the game used to be a clicker: you likely won't be as fast. It's not the end of the world if you leave some rarely used skills unbound, but those that you use most often and those that need to be used quickly (especially defensives) must be keybound to easily reachable keys or combinations. (Exercise some caution, though: you might not want to bind your most powerful defensive to something you easily press by accident.)</p>
+		<p>Some mice and keyboards offer remappable keys or macro keys. If you bind something to these, you can set any akward keybind for the ability and the software will manage it for you. The game does not always detect the Alt key if it's replicated by some software; be careful when binding to a combination with that key. (Ctrl and Shift do not suffer from this problem.)</p>
+		<p>Under Targeting in the keybinding preferences, especially if you're playing healer/tank, setting Target Group Member 1-4 to something easily reachable allows you to quickly target your teammates in the heat of a a fight without having to click in the ops frame. Target Self makes yourself the current target, while Acquire Target's Target and Acquire Focus Target's Target do what they say; these are immensely helpful in, for example, doing proper hardswaps. The Self/Focus Target Modifiers, while pressed, temporarily target your abilities on yourself/your focus target, without having to actually switch targets. You can use the Focus Target Modifier to, for example, easily interrupt enemy healers.</p>
+		<p>Think it over which interface elements you need to have keybound and clear everything else. Not only having some random window pop up mid-fight if you press something wrong annoying, but some of those can cause a noticeable lag on opening, too.</p>
+	<h2>Chat</h2>
+		<p>As you propably know, chat has different <em>channels</em>, sometimes colored distinctively to help differentiating them, and they can be read by different groups of people.</p>
+		<ul class="spaced">
+			<li><span class="chat-general">General</span>/<span class="chat-general">PvP</span>: These channels are visible to players of <em>your own faction</em>, in all instances of the warzone you're in. (So if there's another Huttball going on in parallel, they will be able to see it too. It's pointless to curse at the other faction in this channel because they will not see it. The chat commands to switch to them quickly are /1 and /2.</li>
+			<li><span class="chat-general">Say</span>/<span class="chat-yell">Yell</span>: These two can be seen by anyone nearby, even in the other faction. Messages don't appear to people in other instances of the same warzone. Chat commands are /say and /yell.</li>
+			<li><span class="chat-ops">Ops</span>: Ops chat is for your full group, whether it's 8 or 4 people. Its chat command is /ops.</li>
+			<li><span class="chat-group">Group</span>: This also confuses a lot of people. As you can see, any ops group is made up of smaller, 4-man groups: when you write in group chat, you talk to people of this group. I.e. in an arena everyone, in 8vs8 only half the people will be able to see what you tell them. Also, if you queue pre-grouped, even though the game remembers your group outside the warzone, while inside, writing into group chat will work according to the regular in-warzone way. (If, however, you're grouped and you are not in a warzone, only members of your normal group will see it.) The chat command you're looking for is /p.</li>
+		</ul>
+
+<h1 id="toc-glossary">Glossary</h1>
+	<ul>
+		<li id="glossary-term-buff">Buff: A positive effect.</li>
+		<li id="glossary-term-debuff">Debuff: A negative effect.</li>
+		<li id="glossary-term-gcd">GCD: Global cooldown. The minimum amount of time (baseline 1.5 seconds) that must pass between regular ability activations.</li>
+		<li id="glossary-term-cd">CD: Cooldown. This is used in two meanings. It can both refer to the time until an ability becomes usable again, or to offensive/defensive abilities that give offensive/defensive benefits to their user and usually have a long cooldown.</li>
+		<li id="glossary-term-dcd">DCD: Defensive cooldown. Defensive ability.</li>
+		<li id="glossary-term-rotation">Rotation. The optimal sequence of ability activations that maximize effectiveness.</li>
+		<li id="glossary-term-cc">CC: Crowd Control. Any kind of control effect in general, most commonly stuns.</li>
+		<li id="glossary-term-hardstun">Hardstun: Incapacitating effect that does not break on taking damage.</li>
+		<li id="glossary-term-mez">Mez/sap: Incapacitating effect that breaks on taking damage.</li>
+		<li id="glossary-term-breaker">Breaker: The ability that purges any CC effects.</li>
+		<li id="glossary-term-whitebar">Whitebar: Control immunity from a filled-up resolve bar.</li>
+		<li id="glossary-term-cap">Cap: Capture. It is used both as capturing and getting captured, i.e. losing some objective.</li>
+		<li id="glossary-term-aoe">AoE: Area of Effect. Abilities that affect targets in some area, contrary to single-target ones.</li>
+		<li id="glossary-term-dot">DoT: Damage over Time. Periodic effects that give a debuff to their target and keep damaging until they expire.</li>
+		<li id="glossary-term-hot">HoT: Heal over Time. Like DoTs, but for heals.</li>
+		<li id="glossary-term-los">LoS: Line of Sight. When used as a verb, it means to move behind some object that provides LoS.</li>
+		<li id="glossary-term-dps">DPS: Damage per Second.</li>
+		<li id="glossary-term-hps">HPS: Healing per Second.</li>
+		<li id="glossary-term-pug">PuG: Pickup Group. A group that was assembled by the game via random matchmaking. This is used both to refer to random players and the groups themselves.</li>
+		<li id="glossary-term-premade">Premade: Opposite of a PuG, a group that was assembled before queueing.</li>
+	</ul>
+
+<h1>Thanks to</h1>
+
+	<p>For making this guide possible by providing invaluable data, resources, being my lab rats for experimenting with various mechanics, pointing out errors and suggesting improvements, in no particular order:</p>
+	<ul>
+	  <li><a href="https://swtor.jedipedia.net/en">Jedipedia</a>,</li>
+	  <li><a href="http://dulfy.net/">Dulfy.net</a>,</li>
+	  <li><a href="https://torcommunity.com/">TorCommunity</a>,</li>
+	  <li>Delegate,</li>
+	  <li>Xicory,</li>
+	  <li>all the people who carried me in premades,</li>
+	  <li>members of the official forum, in particular posters of <a href="http://www.swtor.com/community/showthread.php?t=939837">this</a> thread.</li>
+	</ul>
+</body>
+</html>

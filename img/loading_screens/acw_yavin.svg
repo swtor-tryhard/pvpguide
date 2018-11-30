@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg image-rendering="auto" baseProfile="basic" version="1.1" x="0px" y="0px" viewBox="0 0 1600 720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<g id="Civil-War" overflow="visible">
+			<image overflow="visible" xlink:href="civil_war.png" height="100%" width="100%"/>
+		</g>
+		<g id="Yavin-Ruins" overflow="visible">
+			<image overflow="visible" xlink:href="yavin_ruins.png" height="100%" width="100%"/>
+		</g>
+	</defs>
+	<g overflow="visible">
+		<g display="none">
+			<use xlink:href="#Yavin-Ruins"/>
+			<animate attributeName="display" repeatCount="indefinite" dur="12s" keyTimes="0;.917;1" values="none;inline;inline"/>
+		</g>
+		<g display="none">
+			<use xlink:href="#Civil-War"/>
+			<animate attributeName="display" repeatCount="indefinite" dur="12s" keyTimes="0;.417;.503;1" values="none;inline;none;none"/>
+		</g>
+		<g display="none">
+			<use xlink:href="#Civil-War">
+				<animate attributeName="opacity" repeatCount="indefinite" dur="12s" keyTimes="0;.917;.997;1" values="0;0;.96;.96"/>
+			</use>
+			<animate attributeName="display" repeatCount="indefinite" dur="12s" keyTimes="0;.917;1" values="none;inline;inline"/>
+		</g>
+		<g display="none">
+			<use xlink:href="#Yavin-Ruins">
+				<animate attributeName="opacity" repeatCount="indefinite" dur="12s" keyTimes="0;.417;.503;1" values="0;0;1;1"/>
+			</use>
+			<animate attributeName="display" repeatCount="indefinite" dur="12s" keyTimes="0;.417;.917;1" values="none;inline;none;none"/>
+		</g>
+		<g>
+			<use xlink:href="#Civil-War"/>
+			<animate attributeName="display" repeatCount="indefinite" dur="12s" keyTimes="0;.417;1" values="inline;none;none"/>
+		</g>
+	</g>
+</svg>

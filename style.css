@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Condensed");
+@import url("jquery-ui-core.css");
+@import url("jquery-ui-tabs.css");
+/* azure */
+/* cadetblue */
+/* black */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url(img/background.png);
+}
+
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #F0FFFF;
+  text-align: justify;
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 1em 0 !important;
+  padding: 0 !important;
+}
+
+img.icon.small {
+  box-sizing: border-box;
+  height: 20px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  padding: 1px;
+  vertical-align: top;
+}
+img.icon.ability.small {
+  background: url(img/misc/ability_border_small.png) no-repeat;
+}
+
+a {
+  color: #5F9EA0;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.wz-intro {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  object-fit: scale-down;
+}
+.wz-intro img, .wz-intro embed {
+  max-width: 100% !important;
+}
+
+.border {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  display: block;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 !important;
+  width: fit-content;
+}
+
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+  margin: 0;
+  width: 100% !important;
+}
+table .internal-header {
+  margin: 0 !important;
+}
+table .internal-header .class-icon {
+  margin: 0;
+  margin-right: 5px;
+}
+table .details-row {
+  padding-left: 15px;
+}
+table .details-row .border {
+  width: unset;
+}
+table th, table td {
+  padding: 5px 5px;
+}
+table th > p:first-child, table td > p:first-child {
+  margin-top: 0 !important;
+}
+table th > p:last-child, table td > p:last-child {
+  margin-bottom: 0 !important;
+}
+table thead th {
+  background-color: #323232;
+  border: 1px solid #000000;
+  font-weight: bolder;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #404040;
+}
+table tbody tr:nth-child(even) {
+  background-color: #4A4A4A;
+}
+table tbody tr:hover {
+  background-color: #292929;
+}
+table tbody td {
+  border-top: 1px solid #000000;
+}
+
+.expansible-container {
+  width: 100%;
+  position: relative;
+  max-height: 480px;
+  overflow-y: hidden;
+}
+
+.expansible-expander {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 430px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, #323232 50%, #323232 100%);
+  padding-top: 25px;
+}
+
+figure {
+  background: #323232;
+  display: table;
+  padding: 5px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+}
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: scale-down;
+  max-width: 100%;
+}
+figure figcaption {
+  background: #323232;
+  caption-side: bottom;
+  display: table-caption;
+  font-weight: bolder;
+  padding: 5px;
+  padding-top: 10px;
+}
+figure figcaption img {
+  display: inline;
+}
+
+iframe {
+  display: block;
+  border: none;
+}
+
+iframe[src*="youtube.com"] {
+  width: 640px;
+  height: 360px;
+}
+
+.yt-embed {
+  width: 640px;
+  height: 360px;
+  background-position-y: -60px;
+  position: relative;
+}
+.yt-embed .yt-playbutton {
+  width: 68px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.yt-embed:hover .yt-playbutton-bg {
+  fill: #FF0000;
+}
+
+ul.spaced li, ol.spaced li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.standardbg {
+  background: #323232;
+}
+
+.para-margin-top, .para {
+  margin-top: 1em !important;
+}
+
+.para-margin-bottom, .para {
+  margin-bottom: 1em !important;
+}
+
+.para {
+  display: block;
+  margin: 1em auto !important;
+}
+
+.floater, .floater-right, .floater-left {
+  display: inline-block;
+  max-width: 33%;
+  margin: 10px;
+  margin-top: 0;
+  vertical-align: middle;
+  width: auto !important;
+}
+.floater img, .floater-right img, .floater-left img, .floater embed, .floater-right embed, .floater-left embed {
+  width: 100%;
+}
+
+.floater-left {
+  float: left;
+  margin-left: 0 !important;
+}
+
+.floater-right {
+  float: right;
+  margin-right: 0 !important;
+}
+
+.ui-state-hover {
+  background: #292929;
+}
+
+.ui-tabs .ui-tabs-nav {
+  background: #323232;
+}
+.ui-tabs .ui-tabs-active, .ui-tabs .ui-tabs-panel {
+  background: #404040;
+}
+
+.chat-general {
+  color: #b3ecff;
+}
+
+.chat-group {
+  color: #1d8cfe;
+}
+
+.chat-ops {
+  color: #efbc55;
+}
+
+.chat-yell {
+  color: #ff7397;
+}
+
+.torctip_ability {
+  color: #5F9EA0;
+}
+
+.torctip_ability, .torctip_premium, .torctip_prototype, .torctip_artifact, .torctip_legendary {
+  white-space: nowrap;
+}
+
+.torctip_tooltip {
+  font-size: 14px;
+}
+
+.torctip_image_inset {
+  float: left;
+  margin-top: 3px;
+  margin-bottom: 3px !important;
+  margin-right: 8px !important;
+}
+.torctip_image_inset img {
+  display: block;
+}
+
+.torctip_wrapper {
+  all: initial;
+}
+
+.small_border.torctip_image_effect {
+  background: url("img/misc/effect_border.small.png") no-repeat;
+}
+
+.class-icon {
+  vertical-align: middle;
+}
+
+.small {
+  font-size: inherit;
+  margin: 0;
+}
+
+.gamefont, .item-description {
+  font-family: Eurofont;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.noborder {
+  border: none !important;
+}
+
+.nopaddig {
+  padding: 0 !important;
+}
+
+.smallpadding {
+  padding: 5px;
+}
+
+.content-width {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.minwidth {
+  width: min-content;
+}
+
+.nofullwidth {
+  width: auto;
+}
+
+.fullwidth {
+  width: 100% !important;
+}
+
+.halfwidth {
+  width: 50% !important;
+}
+
+.thirdwidth {
+  width: 33% !important;
+}
+
+.quarterwidth {
+  width: 25% !important;
+}
+
+.fullheight {
+  height: 100%;
+}
+
+.topalign {
+  vertical-align: top;
+}
+
+.midalign {
+  vertical-align: middle;
+}
+
+.bullet-list-item {
+  display: list-item;
+  margin-left: 40px;
+}
